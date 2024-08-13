@@ -1,0 +1,123 @@
+import { trans } from "@mongez/localization";
+import { useEffect, useState } from "react";
+import { FiMinus } from "react-icons/fi";
+import { GoPlus } from "react-icons/go";
+import logo from "../../../../../shared/assets/images/Aloha-dot-logo-white 1.png";
+import { Link } from "@mongez/react-router";
+export default function Footer() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [careersOpen, setCareersOpen] = useState(false);
+  const [socialsOpen, setSocialsOpen] = useState(false);
+  const [helpOpen, setHelpOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  // Define toggle functions for each ul
+  const toggleCareers = () => setCareersOpen(!careersOpen);
+  const toggleSocials = () => setSocialsOpen(!socialsOpen);
+  const toggleHelp = () => setHelpOpen(!helpOpen);
+  return (
+    <>
+      <footer className="my-5">
+        <div className=" w-11/12 py-5  m-auto bg-customBlack rounded-2xl text-white mb-3">
+          <div className="flex flex-col md:flex-row py-6 w-11/12  m-auto">
+            <div className="md:w-7/12">
+              <img
+                src={logo}
+                className="w-1/2  sm:w-1/4 mb-2"
+                alt="alohadot logo"
+              />
+              <p className="text-gray-100 text-xs text-left  ">
+                {trans("footerSlogan")}
+              </p>
+            </div>
+            <div className="md:w-5/12 flex flex-col md:flex-row justify-around pt-3 ">
+              <ul
+                onClick={isMobile ? toggleCareers : undefined}
+                className="mb-5 border-b border-b-gray-700 sm:border-none py-4">
+                <div className="flex justify-between  items-center">
+                  <li className="mb-2 font-bold text-sm md:text-base 0 ">
+                    {trans("Informations")}
+                  </li>
+                  {isMobile &&
+                    (careersOpen ? (
+                      <FiMinus className="text-4xl" />
+                    ) : (
+                      <GoPlus className="text-4xl" />
+                    ))}
+                </div>
+                {(careersOpen || !isMobile) && (
+                  <>
+                  <li className="text-xs mb-4 text-gray-300">{trans("about")}</li>
+                  <li className="text-xs mb-4 text-gray-300">{trans("Careers")}</li>
+                  <li className="text-xs mb-4 text-gray-300">{trans("API  Documentation")}</li>
+                  </>
+                  
+                )}
+              </ul>
+              <ul
+                onClick={isMobile ? toggleSocials : undefined}
+                className="mb-4 border-b border-b-gray-700 sm:border-none  py-4">
+                <div className="flex justify-between  items-center">
+                  <li className="mb-2 font-bold text-sm md:text-base">
+                    {trans("socials")}
+                  </li>
+                  {isMobile &&
+                    (socialsOpen ? (
+                      <FiMinus className="text-4xl" />
+                    ) : (
+                      <GoPlus className="text-4xl" />
+                    ))}
+                </div>
+
+                {(socialsOpen || !isMobile) && (
+                  <>
+                    <li className="text-xs mb-4">{trans("instagram")}</li>
+                    <li className="text-xs mb-4">{trans("facebook")}</li>
+                    <li className="text-xs mb-4">{trans("Tik tok")}</li>
+                  </>
+                )}
+              </ul>
+              <ul
+                onClick={isMobile ? toggleHelp : undefined}
+                className="mb-1  pt-2">
+                <div className="flex justify-between  items-center">
+                  <li className="mb-2 font-bold text-sm md:text-base">
+                    {trans("needHelp")}
+                  </li>
+                  {isMobile &&
+                    (helpOpen ? (
+                      <FiMinus className="text-4xl" />
+                    ) : (
+                      <GoPlus className="text-4xl" />
+                    ))}
+                </div>
+                {(helpOpen || !isMobile) && (
+                  <div>
+                    {" "}
+                    <Link to='/contact-us'>
+                    <li className="text-xs mb-4">{trans("contact")}</li>
+                    </Link>
+                    <li className="text-xs mb-4">{trans("report")}</li>
+                    <li className="text-xs mb-4">{trans("suggest")}</li>{" "}
+                  </div>
+                )}
+              </ul>
+            </div>
+          </div>
+
+          <div className=" w-11/12 m-auto flex justify-between flex-col md:flex-row text-xs py-6 border-t border-gray-700">
+            <div className="pr-5 flex order-1 md:order-2 mb-3">
+              <span className="mr-4 text-xs">{trans("privacy")}</span>
+              <span className="text-xs">{trans("terms")}</span>
+            </div>
+            <p className="order-2 md:order-1">{trans("rights")}</p>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
+}
