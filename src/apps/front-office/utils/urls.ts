@@ -24,6 +24,7 @@ const URLS = {
     privacyPolicy: "/privacy-policy",
     viewRoute: "/pages/:slug",
     dotchat:"/dotchat",
+    joinUs:"/joinUs",
     view: (page: any) => `/pages/${page.id}/${page.slug}`,
   },
 };

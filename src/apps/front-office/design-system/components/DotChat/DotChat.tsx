@@ -1,3 +1,4 @@
+import { Timeline } from "@mantine/core";
 import appStore from "../../../../../shared/assets/images/appStore.svg";
 import dotchatlogo from "../../../../../shared/assets/images/dotcaht.png";
 import playStore from "../../../../../shared/assets/images/googlePlay.svg";
@@ -13,9 +14,13 @@ import right3 from "../../../../../shared/assets/images/right3.svg";
 import right5 from "../../../../../shared/assets/images/right5.svg";
 import right7 from "../../../../../shared/assets/images/right7.svg";
 import rightside from "../../../../../shared/assets/images/Untitled-1 1.svg";
+
+
 export default function DotChat() {
   return (
     <div className=" w-11/12 m-auto">
+   
+    
       <div className="flex justify-center  items-center  mb-4 ">
         <img
           src={dotchatlogo}
@@ -314,6 +319,7 @@ export default function DotChat() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }

@@ -6,6 +6,7 @@ import {
 import PropTypes from "prop-types";
 import { useState } from "react";
 import logo from "../../../../../shared/assets/images/alohadot.png";
+import { Link } from "@mongez/react-router";
 
 const navItems = ["home", "Solutions", "Use Cases", "EN | AR", "contact us"];
 
@@ -70,9 +71,12 @@ export default function Header() {
                     EN | AR
                   </a>
                 </li>
+                <Link to="/contact-us">
                 <button className="rounded-full bg-blue-600 px-3 py-2 text-xs lg:text-sm font-medium text-white hover:text-black hover:bg-transparent border hover:border-black">
                   {trans("contact us")}
                 </button>
+                </Link>
+             
               </ul>
             </nav>
             <button
@@ -99,7 +103,7 @@ export default function Header() {
             <li className="py-2">
               <a
                 href="#"
-                className="block text-gray-800 hover:text-blue-600 bg-gray-100"
+                className="block text-gray-800 hover:text-blue-600"
                 onClick={handleDrawerToggle}>
                 {trans("Home")}
               </a>
@@ -107,7 +111,7 @@ export default function Header() {
             <li className="py-2">
               <a
                 href="#"
-                className="block text-gray-800 hover:text-blue-600 bg-gray-100"
+                className="block text-gray-800 hover:text-blue-600"
                 onClick={handleDrawerToggle}>
                 {trans("Solutions")}
               </a>
@@ -115,7 +119,7 @@ export default function Header() {
             <li className="py-2">
               <a
                 href="#"
-                className="block text-gray-800 hover:text-blue-600 bg-gray-100"
+                className="block text-gray-800 hover:text-blue-600 "
                 onClick={handleDrawerToggle}>
                 {trans("Use Cases")}
               </a>
@@ -123,16 +127,16 @@ export default function Header() {
             <li className="py-2">
               <a
                 href="#"
-                className="block text-gray-800 hover:text-blue-600  items-center bg-gray-100"
+                className="block text-gray-800 hover:text-blue-600  items-center "
                 onClick={handleDrawerToggle}>
                 <LanguageIcon className="mr-1" />
                 {trans("EN | AR")}
               </a>
             </li>
-            <li className="py-2 bg-gray-100">
+            <li className="py-2 ">
               <a
                 href="#"
-                className="block  rounded-full bg-blue-600 px-3 py-2 w-1/5 m-auto text-xs  text-white hover:text-black hover:bg-transparent border hover:border-black"
+                className="block  rounded-full bg-blue-600 py-3 md:px-3 md:py-2 w-1/5 m-auto text-xs  text-white hover:text-black hover:bg-transparent border hover:border-black"
                 onClick={handleDrawerToggle}>
                 {trans("Contact Us")}
               </a>

@@ -4,6 +4,7 @@ import NotFoundPage from "design-system/layouts/NotFoundPage";
 import HomePage from "./pages/HomePage";
 import DotChat from "../design-system/components/DotChat/DotChat";
 import ContactUs from "../design-system/components/ContactUs/ContactUs";
+import JoinUS from "../design-system/components/JoinUS/JoinUS";
 
 publicRoutes([
   {
@@ -21,5 +22,9 @@ publicRoutes([
   {
     path: URLS.contactUs  ,
     component:ContactUs ,
+  },
+  {
+    path: URLS.pages.joinUs  ,
+    component:JoinUS ,
   },
 ]);
