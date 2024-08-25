@@ -25,6 +25,10 @@ groupedTranslations({
     en: "Contact Us",
     ar: "اتصل بنا",
   },
+  solutions: {
+    en: "Solutions",
+    ar: "الحلول",
+  },
   products: {
     en: "Products",
     ar: "المنتجات",
@@ -40,6 +44,22 @@ groupedTranslations({
   arabic: {
     en: "Arabic",
     ar: "العربية",
+  },
+  building: {
+    en: "Building",
+    ar: "بناء",
+  },
+  revolutionary: {
+    en: "Revolutionary",
+    ar: "ثوري",
+  },
+  Paymentsandcommunicationsolutions: {
+    en: "Payments and communication solutions",
+    ar: "الحلول المالية والتواصل",
+  },
+  creating: {
+    en: "Creating ground breaking platforms for, chat, social media and payments, All combined into one.",
+    ar: "إنشاء منصات رائدة للدردشة ووسائل التواصل الاجتماعي والمدفوعات، كلها مدمجة في منصة واحدة.",
   },
   simplifying: {
     en: "Simplifying Life,",
@@ -58,9 +78,30 @@ groupedTranslations({
     ar: "هي شركة ناشئة متخصصة في التكنولوجيا والتكنولوجيا المالية. أعمالنا تركز حالياً على تطبيق مبتكر، دوتشات، الذي يدمج بسلاسة بين الاتصال، المدفوعات المتنقلة، وسائل التواصل الاجتماعي، والتجارة الإلكترونية.",
   },
   explore: {
-    en: "Explore Products",
-    ar: "استكشاف المنتجات",
+    en: "Explore Solutions",
+    ar: "استكشاف الحلول",
   },
+  Wevepartneredwith:{
+    en:"We’ve partnered with",
+    ar: "لقد شُرِكنا مع",
+  },
+  industryleadingproviders:{
+    en:"industry leading providers.",
+    ar:"مقدمي الخدمات الرائدين في الصناعة.",
+  },
+  upcoming:{
+    en:"Upcoming",
+    ar: "القادمة",
+  },
+  alohadotplans:{
+    en:"  Alohadot plans to expand it’s product lines to encompass services in every sector",
+    ar:"تخطط ألوها دوت لتوسيع خطوط منتجاتها لتشمل خدمات في كل القطاعات.",
+  },
+  demographic:{
+    en:"Demographic",
+    ar: "التركيبة السكانية ",
+  },
+
   prodiver: {
     en: "Our providers:",
     ar: "مقدمي خدماتنا:",
@@ -94,8 +135,8 @@ groupedTranslations({
     ar: "تعرف على المزيد",
   },
   employee: {
-    en: "Employee Demographic",
-    ar: "التركيبة السكانية للموظفين",
+    en: "Employee ",
+    ar: "  للموظفين",
   },
   demographicDescription: {
     en: "Dotchat has employees from all over the world but mainly from Egypt and China as they are the location of our major stakeholders.",

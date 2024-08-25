@@ -1,4 +1,3 @@
-import { Timeline } from "@mantine/core";
 import appStore from "../../../../../shared/assets/images/appStore.svg";
 import dotchatlogo from "../../../../../shared/assets/images/dotcaht.png";
 import playStore from "../../../../../shared/assets/images/googlePlay.svg";
@@ -15,16 +14,13 @@ import right5 from "../../../../../shared/assets/images/right5.svg";
 import right7 from "../../../../../shared/assets/images/right7.svg";
 import rightside from "../../../../../shared/assets/images/Untitled-1 1.svg";
 
-
 export default function DotChat() {
   return (
     <div className=" w-11/12 m-auto">
-   
-    
       <div className="flex justify-center  items-center  mb-4 ">
         <img
           src={dotchatlogo}
-          className="sm:w-1/4 w-1/2 mr-4"
+          className="sm:w-1/5 w-1/4 mr-4"
           alt="dotchatlogo"
         />
 
@@ -32,7 +28,9 @@ export default function DotChat() {
           <strong>a revolutionally </strong>all-in-one app
         </p>
       </div>
+      <div className=" bg-no-repeat rounded-2xl overflow-hidden flex flex-col justify-center bg-cover bg-center  p-1 ">
       <img src={bg} className="m-auto w-full " alt="" />
+      </div>
       <div className="my-12">
         <h3 className="text-2xl  my-5 ">
           <strong>About </strong> DotChat
@@ -55,256 +53,301 @@ export default function DotChat() {
           look down below!
         </p>
       </div>
-      <section
-        id="1"
-        className="my-12 flex flex-col md:flex-row items-center justify-around p-5 bg-white">
-        {/* Left Side: Numbered label and text */}
+      <div>
+        <ol className={`relative`}>
+          <li className="">
+            {/* <div className={`absolute w-6 h-6 `} /> */}
+            <section
+              id="1"
+              className="my-12 flex flex-col md:flex-row items-center justify-around p-5 bg-white">
+              {/* Left Side: Numbered label and text */}
 
-        <div className="col-span-2 md:w-3/5 w-full ">
-          <div className="font-bold sm:text-3xl text-xl mb-7 flex items-center">
-            <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
-              1
-            </span>
-            <p>
-              {" "}
-              <strong>Chat</strong> with friends
-            </p>
-          </div>
-          <div className="hidden md:block ">
-            <p className="text-gray-500 text-sm md:text-base mb-4 ">
-              {" "}
-              Chat with your friends, family members or even contact businesses
-              to learn more about their new products, prices, locations or ask
-              any questions you would like!
-            </p>
-            <img src={leftside} className="hidden md:block" alt="" />
-          </div>
-        </div>
-        {/* Right Side: Mobile image */}
-        <div className="md:ml-10 w-full md:w-auto">
-          <img
-            src={rightside}
-            className="w-full h-auto max-w-xs mx-auto"
-            alt="Chat with friends"
-          />
-        </div>
-      </section>
-      <hr />
-      <section
-        id="4"
-        className="my-12 flex flex-col md:flex-row items-center justify-around">
-        {/* Right Side: Numbered label and text */}
-        <div className="col-span-2 md:w-3/5 w-full order-1 md:order-2">
-          <div className="sm:text-3xl text-xl mb-7 flex items-center">
-            <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
-              2
-            </span>
-            <p>
-              <strong> Send </strong> payments
-            </p>
-          </div>
-          <div className="hidden md:block">
-            <p className="text-gray-500 text-sm md:text-base mb-4">
-              Payments with dotchat has never been easier! You can instantly and
-              securely send your friends or family funds. Verification is
-              necessary to gurantee a safe transaction.
-            </p>
-            <img
-              src={rigth2}
-              className="hidden md:block"
-              alt="Payment process"
-            />
-          </div>
-        </div>
+              <div className="col-span-2 md:w-3/5 w-full  ">
+                <div className="sm:text-3xl text-xl mb-7 flex items-center justify-center sm:justify-start">
+                  <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
+                    1
+                  </span>
+                  <p>
+                    {" "}
+                    <strong>Chat</strong> with friends
+                  </p>
+                </div>
+                <div className="hidden md:block ">
+                  <p className="text-gray-500 text-sm md:text-base mb-4 ">
+                    {" "}
+                    Chat with your friends, family members or even contact
+                    businesses to learn more about their new products, prices,
+                    locations or ask any questions you would like!
+                  </p>
+                  <img src={leftside} className="hidden md:block" alt="" />
+                </div>
+              </div>
+              {/* Right Side: Mobile image */}
+              <div className="md:ml-10 w-full md:w-auto">
+                <img
+                  src={rightside}
+                  className="w-full h-auto max-w-xs mx-auto"
+                  alt="Chat with friends"
+                />
+              </div>
+            </section>
+            <hr />
+            {/* <a
+            href="#"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
+            Learn more{" "}
+            <svg
+              className="w-3 h-3 ms-2 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 10">
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M1 5h12m0 0L9 1m4 4L9 9"
+              />
+            </svg>
+          </a> */}
+          </li>
+          <li className=" ">
+            {/* <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" /> */}
+            <section
+              id="2"
+              className="my-12 flex flex-col md:flex-row items-center justify-around">
+              {/* Right Side: Numbered label and text */}
+              <div className="col-span-2 md:w-3/5 w-full order-1 md:order-2">
+                <div className="sm:text-3xl text-xl mb-7 flex items-center sm:justify-start justify-center">
+                  <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
+                    2
+                  </span>
+                  <p>
+                    <strong> Send </strong> payments
+                  </p>
+                </div>
+                <div className="hidden md:block">
+                  <p className="text-gray-500 text-sm md:text-base mb-4">
+                    Payments with dotchat has never been easier! You can
+                    instantly and securely send your friends or family funds.
+                    Verification is necessary to gurantee a safe transaction.
+                  </p>
+                  <img
+                    src={rigth2}
+                    className="hidden md:block"
+                    alt="Payment process"
+                  />
+                </div>
+              </div>
 
-        {/* Left Side: Mobile image */}
-        <div className="md:ml-10 w-full md:w-auto order-2 md:order-1">
-          <img
-            src={left2side}
-            className="w-full h-auto max-w-xs mx-auto"
-            alt="discover products"
-          />
-        </div>
-      </section>
+              {/* Left Side: Mobile image */}
+              <div className="md:ml-10 w-full md:w-auto order-2 md:order-1">
+                <img
+                  src={left2side}
+                  className="w-full h-auto max-w-xs mx-auto"
+                  alt="discover products"
+                />
+              </div>
+            </section>
 
-      <hr />
-      <section
-        id="3"
-        className="my-12 flex flex-col md:flex-row items-center justify-around p-5 bg-white">
-        {/* Left Side: Numbered label and text */}
+            <hr />
+          </li>
+          <li className=" ">
+            {/* <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" /> */}
+            <section
+              id="3"
+              className="my-12 flex flex-col md:flex-row items-center justify-around p-5 bg-white">
+              {/* Left Side: Numbered label and text */}
 
-        <div className="col-span-2  md:w-3/5 w-full ">
-          <div className="sm:text-3xl text-xl mb-7 flex items-center">
-            <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
-              3
-            </span>
-            <p>
-              <strong>Subscribe &</strong> pay your bills
-            </p>
-          </div>
-          <div className="hidden md:block ">
-            <p className="text-gray-500 text-sm md:text-base mb-4 ">
-              Payments with dotchat has never been easier! You can instantly and
-              securely send your friends or family funds. Verification is
-              necessary to gurantee a safe transactio
-            </p>
-            <img src={left3} className="hidden md:block" alt="" />
-          </div>
-        </div>
-        {/* Right Side: Mobile image */}
-        <div className="md:ml-10 w-full md:w-auto">
-          <img
-            src={right3}
-            className="w-full h-auto max-w-xs mx-auto"
-            alt="Subscribe"
-          />
-        </div>
-      </section>
-      <hr />
-      <section
-        id="4"
-        className="my-12 flex flex-col md:flex-row items-center justify-around">
-        {/* Right Side: Numbered label and text */}
-        <div className="col-span-2 md:w-3/5 w-full order-1 md:order-2">
-          <div className="sm:text-3xl text-xl mb-7 flex items-center">
-            <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
-              4
-            </span>
-            <p>
-              <strong> Discover </strong> Products
-            </p>
-          </div>
-          <div className="hidden md:block">
-            <p className="text-gray-500 text-sm md:text-base mb-4">
-              Chat with your friends, family members or even contact businesses
-              to learn more about their new products, prices, locations or ask
-              any questions you would like!
-            </p>
-            <img
-              src={left3}
-              className="hidden md:block"
-              alt="Payment process"
-            />
-          </div>
-        </div>
+              <div className="col-span-2  md:w-3/5 w-full ">
+                <div className="sm:text-3xl text-xl mb-7 flex items-center sm:justify-start justify-center">
+                  <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
+                    3
+                  </span>
+                  <p>
+                    <strong>Subscribe &</strong> pay your bills
+                  </p>
+                </div>
+                <div className="hidden md:block ">
+                  <p className="text-gray-500 text-sm md:text-base mb-4 ">
+                    Payments with dotchat has never been easier! You can
+                    instantly and securely send your friends or family funds.
+                    Verification is necessary to gurantee a safe transactio
+                  </p>
+                  <img src={left3} className="hidden md:block" alt="" />
+                </div>
+              </div>
+              {/* Right Side: Mobile image */}
+              <div className="md:ml-10 w-full md:w-auto">
+                <img
+                  src={right3}
+                  className="w-full h-auto max-w-xs mx-auto"
+                  alt="Subscribe"
+                />
+              </div>
+            </section>
+            <hr />
+          </li>
+          <li className="">
+            <section
+              id="4"
+              className="my-12 flex flex-col md:flex-row items-center justify-around">
+              {/* Right Side: Numbered label and text */}
+              <div className="col-span-2 md:w-3/5 w-full order-1 md:order-2">
+                <div className="sm:text-3xl text-xl mb-7 flex items-center sm:justify-start  justify-center">
+                  <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
+                    4
+                  </span>
+                  <p>
+                    <strong> Discover </strong> Products
+                  </p>
+                </div>
+                <div className="hidden md:block">
+                  <p className="text-gray-500 text-sm md:text-base mb-4">
+                    Chat with your friends, family members or even contact
+                    businesses to learn more about their new products, prices,
+                    locations or ask any questions you would like!
+                  </p>
+                  <img
+                    src={left3}
+                    className="hidden md:block"
+                    alt="Payment process"
+                  />
+                </div>
+              </div>
 
-        {/* Left Side: Mobile image */}
-        <div className="md:ml-10 w-full md:w-auto order-2 md:order-1">
-          <img
-            src={left4}
-            className="w-full h-auto max-w-xs mx-auto"
-            alt="discover products"
-          />
-        </div>
-      </section>
+              {/* Left Side: Mobile image */}
+              <div className="md:ml-10 w-full md:w-auto order-2 md:order-1">
+                <img
+                  src={left4}
+                  className="w-full h-auto max-w-xs mx-auto"
+                  alt="discover products"
+                />
+              </div>
+            </section>
 
-      <hr />
-      <section
-        id="5"
-        className="my-12 flex flex-col md:flex-row items-center justify-around p-5 bg-white">
-        {/* Left Side: Numbered label and text */}
+            <hr />
+          </li>
 
-        <div className="col-span-2  md:w-3/5 w-full ">
-          <div className="sm:text-3xl text-xl mb-7 flex items-center">
-            <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
-              5
-            </span>
-            <p>
-              {" "}
-              <strong>Sell</strong> products
-            </p>
-          </div>
-          <div className="hidden md:block ">
-            <p className="text-gray-500 text-sm md:text-base mb-4 ">
-              Open your business on dotchat, sell and advertise your products
-              and accept payments directly to your business account!
-            </p>
-            <img src={left3} className="hidden md:block" alt="" />
-          </div>
-        </div>
-        {/* Right Side: Mobile image */}
-        <div className="md:ml-10 w-full md:w-auto">
-          <img
-            src={right5}
-            className="w-full h-auto max-w-xs mx-auto"
-            alt="Subscribe"
-          />
-        </div>
-      </section>
-      <hr />
-      <section
-        id="6"
-        className="my-12 flex flex-col md:flex-row items-center justify-around">
-        {/* Right Side: Numbered label and text */}
-        <div className="col-span-2 md:w-3/5 w-full order-1 md:order-2">
-          <div className="sm:text-3xl text-xl mb-7 flex items-center">
-            <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
-              6
-            </span>
-            <p>
-              <strong> Collect money </strong>from customers
-            </p>
-          </div>
-          <div className="hidden md:block">
-            <p className="text-gray-500 text-sm md:text-base mb-4">
-              Payments with dotchat have never been easier! You can instantly
-              and securely send your friends or family funds. Verification is
-              necessary to guarantee a safe transaction.
-            </p>
-            <img
-              src={left3}
-              className="hidden md:block"
-              alt="Payment process"
-            />
-          </div>
-        </div>
+          <li className="">
+            {/* <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" /> */}
+            <section
+              id="5"
+              className="my-12 flex flex-col md:flex-row items-center justify-around p-5 bg-white">
+              {/* Left Side: Numbered label and text */}
 
-        {/* Left Side: Mobile image */}
-        <div className="md:ml-10 w-full md:w-auto order-2 md:order-1">
-          <img
-            src={left6}
-            className="w-full h-auto max-w-xs mx-auto"
-            alt="send payment"
-          />
-        </div>
-      </section>
+              <div className="col-span-2  md:w-3/5 w-full ">
+                <div className="sm:text-3xl text-xl mb-7 flex items-center sm:justify-start justify-center">
+                  <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
+                    5
+                  </span>
+                  <p>
+                    {" "}
+                    <strong>Sell</strong> products
+                  </p>
+                </div>
+                <div className="hidden md:block ">
+                  <p className="text-gray-500 text-sm md:text-base mb-4 ">
+                    Open your business on dotchat, sell and advertise your
+                    products and accept payments directly to your business
+                    account!
+                  </p>
+                  <img src={left3} className="hidden md:block" alt="" />
+                </div>
+              </div>
+              {/* Right Side: Mobile image */}
+              <div className="md:ml-10 w-full md:w-auto">
+                <img
+                  src={right5}
+                  className="w-full h-auto max-w-xs mx-auto"
+                  alt="Subscribe"
+                />
+              </div>
+            </section>
+            <hr />
+          </li>
+          <li className="">
+            {/* <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />{" "} */}
+            <section
+              id="6"
+              className="my-12 flex flex-col md:flex-row items-center justify-around">
+              {/* Right Side: Numbered label and text */}
+              <div className="col-span-2 md:w-3/5 w-full order-1 md:order-2">
+                <div className="sm:text-3xl text-xl mb-7 flex items-center  sm:justify-start justify-center ">
+                  <span className="border rounded-2xl py-4 px-6 font-bold mr-4">
+                    6
+                  </span>
+                  <p>
+                    <strong> Collect money </strong>from customers
+                  </p>
+                </div>
+                <div className="hidden md:block">
+                  <p className="text-gray-500 text-sm md:text-base mb-4">
+                    Payments with dotchat have never been easier! You can
+                    instantly and securely send your friends or family funds.
+                    Verification is necessary to guarantee a safe transaction.
+                  </p>
+                  <img
+                    src={left3}
+                    className="hidden md:block"
+                    alt="Payment process"
+                  />
+                </div>
+              </div>
 
-      <hr />
-      <section
-        id="7"
-        className="my-12 flex flex-col md:flex-row items-center justify-around p-5 ">
-        {/* Left Side: Numbered label and text */}
+              {/* Left Side: Mobile image */}
+              <div className="md:ml-10 w-full md:w-auto order-2 md:order-1">
+                <img
+                  src={left6}
+                  className="w-full h-auto max-w-xs mx-auto"
+                  alt="send payment"
+                />
+              </div>
+            </section>
+            <hr />
+          </li>
+          <li className="">
+            {/* <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" /> */}
+            <section
+              id="7"
+              className="my-12 flex flex-col md:flex-row items-center justify-around p-5 ">
+              {/* Left Side: Numbered label and text */}
 
-        <div className="col-span-2   md:w-3/5 w-full ">
-          <div className="sm:text-3xl text-xl mb-7 flex md:items-center items-start ">
-            <span className="border rounded-2xl py-3 px-6 font-bold mr-4">
-              7
-            </span>
-            <p>
-              <strong>Inventory</strong> & Shipping Management
-            </p>
-          </div>
-          <div className="hidden md:block ">
-            <p className="text-gray-500 text-sm md:text-base mb-4 ">
-              Chat with your friends, family members or even contact businesses
-              to learn more about their new products, prices, locations or ask
-              any questions you would like!
-            </p>
-            <img src={left3} className="hidden md:block" alt="" />
-          </div>
-        </div>
-        {/* Right Side: Mobile image */}
-        <div className="md:ml-10 w-full md:w-auto">
-          <img
-            src={right7}
-            className="w-full h-auto max-w-xs mx-auto"
-            alt="Subscribe"
-          />
-        </div>
-      </section>
-      <hr />
+              <div className="col-span-2   md:w-3/5 w-full ">
+                <div className="sm:text-3xl text-xl mb-7 flex items-center sm:justify-start justify-center">
+                  <span className="border rounded-2xl py-3 px-6 font-bold mr-4">
+                    7
+                  </span>
+                  <p>
+                    <strong>Inventory</strong> & Shipping Management
+                  </p>
+                </div>
+                <div className="hidden md:block ">
+                  <p className="text-gray-500 text-sm md:text-base mb-4 ">
+                    Chat with your friends, family members or even contact
+                    businesses to learn more about their new products, prices,
+                    locations or ask any questions you would like!
+                  </p>
+                  <img src={left3} className="hidden md:block" alt="" />
+                </div>
+              </div>
+              {/* Right Side: Mobile image */}
+              <div className="md:ml-10 w-full md:w-auto">
+                <img
+                  src={right7}
+                  className="w-full h-auto max-w-xs mx-auto"
+                  alt="Subscribe"
+                />
+              </div>
+            </section>
+            <hr />
+          </li>
+        </ol>
+      </div>
+
       <div className="my-12 ">
-        <div className="border rounded-xl  m-auto  py-6 md:w-3/5 w-2/3 flex md:flex-row flex-col justify-center items-center  md:gap-5 gap-2 ">
+        <div className="border rounded-xl  m-auto  py-6 md:w-11/12 w-2/3 flex md:flex-row flex-col justify-center items-center  md:gap-5 gap-2 ">
           <div>
             <img src={qrCode} className="md:w-11/12 w-28 md:mb-0 mb-8" alt="" />
           </div>
@@ -319,7 +362,6 @@ export default function DotChat() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

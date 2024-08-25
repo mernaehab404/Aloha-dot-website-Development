@@ -1,42 +1,76 @@
 import { DocumentIcon } from "@heroicons/react/24/solid";
-import join from "../../../../../shared/assets/images/Framejoin.svg";
+import joinimg from "../../../../../shared/assets/images/Framejoin.svg";
+import { useState } from "react";
+import * as Yup from "yup";
+import { useFormik } from "formik";
+
 export default function JoinUS() {
+  const [loading, setLoading] = useState(true);
+  const [errorMsg, setErrorMsg] = useState("");
+
+  // Define the validation schema directly
+  const validationSchema = Yup.object({
+    name: Yup.string().required('Name is required'),
+    email: Yup.string().required('Email is required').email('Invalid email format'),
+    message: Yup.string().required('Message is required'),
+  });
+
+  // Initialize formik
+  const join = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    validationSchema,
+    onSubmit: (values) => {
+      console.log(values);
+      console.log("done");
+      // sendDataToApi(values);
+    },
+  });
+
   return (
-    <div className="w-4/5 m-auto flex flex-col md:flex-row justify-center rounded-lg overflow-hidden">
+    <div className="w-11/12 sm:w-4/5 m-auto flex flex-col md:flex-row justify-center rounded-lg overflow-hidden">
       {/* Left Side: Image and Text */}
-      <div className="relative w-full md:w-2/5  my-auto">
-        <img src={join} alt="Contact Us" className="rounded-3xl m-auto w-full  sm:h-full " />
-        <div className="absolute inset-0 bg-black opacity-50  rounded-3xl"></div>
-        <div className="absolute inset-0 flex  justify-center w-4/5 m-auto">
-      <div className=" text-white p-4">
-        <h2 className="text-3xl font-bold">Want to join our team?</h2>
-        <p className="mt-2 text-sm text-gray-200">
-          We're looking for passionate people to join us on our mission. We value flat hierarchies, clear communication, and full ownership and responsibility.
-        </p>
-      
+      <div className="relative md:w-2/5 my-auto w-full mb-7">
+        <img src={joinimg} alt="Contact Us" className=" object-cover rounded-3xl sm:h-full w-full h-60" />
+        <div className="absolute inset-0 bg-black opacity-50 rounded-3xl"></div>
+        <div className="absolute inset-0 flex justify-center sm:items-start items-center sm:mt-10 w-11/12 m-auto ">
+          <div className="text-white p-4">
+            <h2 className="text-3xl font-bold w-4/5">Want to join our team?</h2>
+            <p className="mt-2 text-sm text-gray-200">
+              We're looking for passionate people to join us on our mission. We value flat hierarchies, clear communication, and full ownership and responsibility.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-      </div>
-      {/* Right Side: Form */}
-      <form className="w-full md:w-1/2 px-8 bg-white">
+
+      <form className="w-full md:w-1/2 px-8 bg-white" onSubmit={join.handleSubmit}>
         <div className="space-y-3">
-          <div className="">
+          <div>
             <label
-              htmlFor="username"
+              htmlFor="name"
               className="block text-sm font-medium leading-6 text-gray-900 after:content-['*'] after:ml-0.5 after:text-red-500">
               Name
             </label>
             <div className="mt-2">
               <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-500">
                 <input
-                  id="username"
-                  name="username"
+                  onBlur={join.handleBlur}
+                  onChange={join.handleChange}
+                  value={join.values.name}
+                  id="name"
+                  name="name"
                   type="text"
-                  placeholder="E.g Merna Ehab"
-                  autoComplete="username"
+                  placeholder="E.g Aloha dot"
+                  autoComplete="name"
                   className="block w-full border-0 bg-transparent py-4 pl-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                 />
               </div>
+              {join.touched.name && join.errors.name ? (
+                <div className="text-red-500 text-sm mt-1">{join.errors.name}</div>
+              ) : null}
             </div>
           </div>
           <div className="sm:col-span-6">
@@ -47,13 +81,19 @@ export default function JoinUS() {
             </label>
             <div className="mt-2">
               <input
+                onBlur={join.handleBlur}
+                onChange={join.handleChange}
+                value={join.values.email}
                 id="email"
                 name="email"
                 type="email"
-                placeholder="E.g. ahmedkhaled@gmail.com"
+                placeholder="E.g. alohadot@gmail.com"
                 autoComplete="email"
                 className="block w-full rounded-md border-0 py-4 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
               />
+              {join.touched.email && join.errors.email ? (
+                <div className="text-red-500 text-sm mt-1">{join.errors.email}</div>
+              ) : null}
             </div>
           </div>
           <div className="col-span-full">
@@ -64,23 +104,21 @@ export default function JoinUS() {
             </label>
             <div className="mt-2">
               <textarea
+                onBlur={join.handleBlur}
+                onChange={join.handleChange}
+                value={join.values.message}
                 id="message"
                 name="message"
                 rows={4}
-                placeholder="Write what you want ..."
-                className="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 after:content-['*'] after:ml-0.5 after:text-red-500"
-                defaultValue={""}
+                placeholder="Write what you want..."
+                className="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
               />
+              {join.touched.message && join.errors.message ? (
+                <div className="text-red-500 text-sm mt-1">{join.errors.message}</div>
+              ) : null}
             </div>
           </div>
-          <div className="sm:col-span-6">
-            <label
-              htmlFor="subject"
-              className="block text-sm font-medium leading-6 text-gray-900 after:content-['*'] after:ml-0.5 after:text-red-500">
-              Subject
-            </label>
-       
-          </div>
+          
           <div className="col-span-full">
             <label
               htmlFor="file-upload"

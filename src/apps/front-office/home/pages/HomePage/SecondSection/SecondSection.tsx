@@ -105,7 +105,7 @@ const SecondSection: React.FC = () => {
             <img src={img3} className="w-2/3 mr-2" alt="download" />
 
             <Link to="/dotchat">
-              <button className="outline outline-1 outline-blue-500 text-blue-600 lg:px-10 lg:text-base text-xs rounded-lg lg:py-2 ">
+              <button className="outline outline-1 outline-blue-500 text-blue-600  md:px-2 lg:px-8 lg:mr-5 lg:text-base text-xs text-nowrap  rounded-lg sm:py-3  ">
                 {trans("learnMore")}
               </button>
             </Link>
@@ -119,7 +119,8 @@ const SecondSection: React.FC = () => {
           />
         </div>
       </section>
-      <section className=" sm:hidden">
+      {/* mobile size  */}
+      <section className=" md:hidden">
         <div className="py-14 w-4/5 m-auto  border-y border-gray-200 overflow-hidden">
           <h4 className="mb-4 text-3xl flex flex-wrap ">
             <strong className="font-bold">{trans("dotchat")}</strong>

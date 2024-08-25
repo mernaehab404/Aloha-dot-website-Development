@@ -25,11 +25,14 @@ export default function Footer() {
         <div className=" w-11/12 py-5  m-auto bg-customBlack rounded-2xl text-white mb-3">
           <div className="flex flex-col md:flex-row py-6 w-11/12  m-auto">
             <div className="md:w-7/12">
-              <img
+            <Link to="/">
+            <img
                 src={logo}
                 className="w-1/2  sm:w-1/4 mb-2"
                 alt="alohadot logo"
               />
+            </Link>
+            
               <p className="text-gray-100 text-xs text-left  ">
                 {trans("footerSlogan")}
               </p>
@@ -51,8 +54,14 @@ export default function Footer() {
                 </div>
                 {(careersOpen || !isMobile) && (
                   <>
-                  <li className="text-xs mb-4 text-gray-300">{trans("about")}</li>
-                  <li className="text-xs mb-4 text-gray-300">{trans("Careers")}</li>
+                  <Link to="/about-us">
+                  <li className="text-xs mb-4 ">{trans("about")}</li>
+
+                  </Link>
+                  <Link to="/joinUs">
+                  <li className="text-xs mb-4">{trans("Careers")}</li>
+
+                  </Link>
                   <li className="text-xs mb-4 text-gray-300">{trans("API  Documentation")}</li>
                   </>
                   

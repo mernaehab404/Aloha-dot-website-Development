@@ -1,9 +1,10 @@
 import { trans } from "@mongez/localization";
 import bg from "../../../../../../shared/assets/images/Group 1000002333.png";
 import "../HomePage.css";
+import { Link } from "@mongez/react-router";
 const HeroSection: React.FC = () => {
   return (
-    <div className=" h-full  flex items-center justify-center mt-20 sm:mt-28">
+    <div className=" h-full  flex items-center justify-center mt-10 ">
       <div
         className="hero w-11/12  bg-no-repeat rounded-2xl overflow-hidden flex flex-col justify-center bg-cover bg-center "
         style={{
@@ -17,9 +18,9 @@ const HeroSection: React.FC = () => {
         </p> */}
           <div className="relative">
           <p className="Building text-3xl sm:text-4xl md:text-5xl text-white sm:w-4/5 md:w-3/5 lg:w-1/2 mb-4">
-        Building{" "}
-        <span className="relative inline-block">
-          Revolutionary
+        {trans("building")}
+        <span className="relative inline-block ml-3">
+          {trans("revolutionary")}
           <svg
             className="absolute  -bottom-2 w-full h-auto"
             viewBox="0 0 326 18"
@@ -37,19 +38,21 @@ const HeroSection: React.FC = () => {
             />
           </svg>
         </span>{" "}
-        Payments and communication solutions
+       {trans("Paymentsandcommunicationsolutions")}
       </p>
           </div>
           <p className="text-sm sm:text-base sm:w-1/2 text-gray-300 font-light mb-8 leading-7">
-            Creating ground breaking platforms for, chat, social media and
-            payments, All combined into one.
+            {trans("creating")}
           </p>
           <div>
+            <Link to="/contact-us">
             <button className="rounded-md sm:rounded-3xl bg-transparent border text-white hover:bg-blue-600 hover:border-blue-600 px-6 py-5 sm:py-2 w-full sm:w-auto mr-6 mb-4">
-              {trans("Contact Us")}
+              {trans("contact")}
             </button>
+            </Link>
+       
             <button className=" rounded-md bg-blue-600 sm:rounded-3xl hover:bg-transparent hover:border hover:text-white px-6 py-5 sm:py-2 w-full sm:w-auto ">
-              {trans("Explore Solutions")}
+              {trans("explore")}
             </button>
           </div>
         </div>
