@@ -16,8 +16,8 @@ const HeroSection: React.FC = () => {
           {/* <p className="Building text-3xl  sm:text-4xl md:text-5xl   text-white sm:w-4/5 md:w-3/5 lg:w-1/2  mb-4 ">
           Building Revolutionary Payments and communication solutions
         </p> */}
-          <div className="relative">
-          <p className="Building text-3xl sm:text-4xl md:text-5xl text-white sm:w-4/5 md:w-3/5 lg:w-1/2 mb-4">
+          <div className="relative ">
+          <p className="Building text-3xl sm:text-4xl md:text-5xl text-white sm:w-4/5 md:w-3/5 lg:w-1/2 mb-4 ">
         {trans("building")}
         <span className="relative inline-block ml-3">
           {trans("revolutionary")}

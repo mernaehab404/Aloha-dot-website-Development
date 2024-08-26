@@ -67,10 +67,10 @@ const settings = {
 
 const Directors: React.FC = () => {
   return (
-    <section className="mt-3 py-20 border-t border-gray-200 ">
-      <div className="p-5 text-center w-1/2 m-auto">
-        <h2 className="text-5xl font-semibold mb-8 leading-4">{trans("board")}</h2>
-        <p className="mb-8 text-gray-400">
+    <section className="mt-3 py-14 border-t border-gray-200 w-4/5 m-auto">
+      <div className="p-5 text-center">
+        <h2 className="md:text-5xl text-xl font-semibold mb-3 leading-4 ">{trans("board")}</h2>
+        <p className="md:mb-8 mb-2 md:text-base text-xs text-gray-400">
           Alohadot is backed by top leaders from around the world.
         </p>
         <Slider {...settings}>
