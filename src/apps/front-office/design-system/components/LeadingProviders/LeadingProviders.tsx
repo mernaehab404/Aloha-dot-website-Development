@@ -45,10 +45,10 @@ const settings = {
 
 const LeadingProviders: React.FC = () => {
   return (
-    <section className="mt-3 py-14  ">
+    <section className="mt-3 py-8  ">
       <div className="pb-14 text-center">
-        <h2 className="sm:text-2xl text-lg mb-5 w-2/3  py-10 sm:w-full m-auto ">
-        <span className="block py-4">
+        <h2 className="sm:text-2xl text-lg mb-2 w-2/3  py-5 sm:w-full m-auto ">
+        <span className="block py-2">
         {trans("Wevepartneredwith")}
         </span>
       
@@ -80,17 +80,17 @@ const LeadingProviders: React.FC = () => {
           </div>
           <div className="sm:w-80 m-auto px-3">
             <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center">
-              <img src={we} className="m-auto px-2 scale-150" />
+              <img src={we} className="m-auto px-2 md:scale-150" />
             </div>
           </div>
           <div className="sm:w-80 m-auto px-3">
             <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center">
-              <img src={flex} className="m-auto px-2 scale-150" />
+              <img src={flex} className="m-auto px-2 md:scale-150" />
             </div>
           </div>
           <div className="sm:w-80 m-auto px-3">
             <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center ">
-              <img src={paytabs} className="m-auto px-2 scale-150 " />
+              <img src={paytabs} className="m-auto px-2 md:scale-150 " />
             </div>
           </div>
         </Slider>

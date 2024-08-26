@@ -6,6 +6,7 @@ import DotChat from "../design-system/components/DotChat/DotChat";
 import ContactUs from "../design-system/components/ContactUs/ContactUs";
 import JoinUS from "../design-system/components/JoinUS/JoinUS";
 import Timeline from "../design-system/Indicators/ProgressBar";
+import AboutUs from "../design-system/components/AboutUs/AboutUs";
 
 publicRoutes([
   {
@@ -19,6 +20,10 @@ publicRoutes([
   {
     path: URLS.pages.dotchat,
     component: DotChat,
+  },
+  {
+    path: URLS.pages.aboutUs,
+    component: AboutUs,
   },
   // {
   //   path: URLS.pages.progress,

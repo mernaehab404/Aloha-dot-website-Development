@@ -10,9 +10,12 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 }
 body{
   font-family: var(--font-family) !important;
+  overflow-x: hidden;
 }
 
 
