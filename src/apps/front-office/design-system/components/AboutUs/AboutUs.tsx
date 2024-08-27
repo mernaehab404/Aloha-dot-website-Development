@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import about from "../../../../../shared/assets/images/about.png";
-import first from "../../../../../shared/assets/images/firstvalue.jpg";
 import flex from "../../../../../shared/assets/images/flextock.svg";
 import img2 from "../../../../../shared/assets/images/Frame 114.svg";
 import img1 from "../../../../../shared/assets/images/Frame 115.svg";
@@ -18,10 +17,9 @@ import martin from "../../../../../shared/assets/images/Rectangle 105.png";
 import dack from "../../../../../shared/assets/images/Rectangle 106.png";
 import elemam from "../../../../../shared/assets/images/Rectangle 95.png";
 import other from "../../../../../shared/assets/images/Rectangle 96.png";
-import second from "../../../../../shared/assets/images/secondvalue.jfif";
-import third from "../../../../../shared/assets/images/thirdvalue.jfif";
 import img4 from "../../../../../shared/assets/images/vodaaafone.svg";
 import we from "../../../../../shared/assets/images/we.svg";
+import ValueSection from "./ValueSection";
 export default function AboutUs() {
   const settings = {
     dots: false,
@@ -43,25 +41,7 @@ export default function AboutUs() {
       },
     ],
   };
-  const [expandedIndex, setExpandedIndex] = useState(0);
 
-  const images = [
-    { src: first, title: "Innovation", description: "Some description here" },
-    { src: second, title: "Teamwork", description: "Another description here" },
-    {
-      src: third,
-      title: "Creativity",
-      description: "Additional description here",
-    },
-    { src: first, title: "Innovation", description: "Some description here" },
-  ];
-
-  const handleClick = index => {
-    // Only change the expanded index if clicking on a different image
-    if (index !== expandedIndex) {
-      setExpandedIndex(index);
-    }
-  };
 
   return (
     <div className=" bg-slate-50">
@@ -76,10 +56,10 @@ export default function AboutUs() {
           </p>
         </div>
         <div className="relative rounded-3xl border-gray-300  border bg-white flex justify-center items-center
-       md:h-[600px] h-44">
+       md:h-[600px] h-52">
           <img src={about} className="absolute top-0  " alt="" />
         </div>
-        <div className="ml-3 my-20">
+        <div className="ml-3 md:my-20 my-14">
           <p className="text-2xl my-5">About Alohadot</p>
           <p>
             As a company incorporated under the law of the{" "}
@@ -96,7 +76,7 @@ export default function AboutUs() {
         <div className="grid md:grid-cols-2 grid-cols-1 gap-14">
           <div className="relative group">
             <div className="relative">
-              <img src={inspire} className="h-80 w-full rounded-3xl" alt="" />
+              <img src={inspire} className=" h-72 w-full rounded-3xl" alt="" />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 rounded-3xl flex items-center justify-center">
                 <div className="text-white text-2xl">Inspiring vision</div>
               </div>
@@ -111,7 +91,7 @@ export default function AboutUs() {
           </div>
           <div className="relative group">
             <div className="relative">
-              <img src={history} className=" h-80 w-full rounded-3xl" alt="" />
+              <img src={history} className=" h-72 w-full rounded-3xl" alt="" />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 rounded-3xl flex items-center justify-center">
                 <div className="text-white text-2xl">
                   {" "}
@@ -130,34 +110,7 @@ export default function AboutUs() {
           </div>
         </div>
         {/* start values section */}
-        <div className="my-16">
-        <p className="text-2xl my-5">Alohadot Values</p>
-        <div className="flex flex-col md:flex-row overflow-hidden space-y-2 md:space-x-2">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              onClick={() => handleClick(index)}
-              className={`relative cursor-pointer overflow-hidden transition-all duration-300 ease-in-out ${
-                expandedIndex === index
-                  ? "w-full  h-full"
-                  : "w-full md:w-1/5 h-28 md:h-auto"
-              }`}>
-              <img
-                src={image.src}
-                alt={image.title}
-                className="w-full h-full object-cover rounded-lg"
-              />
-              {expandedIndex === index && (
-                <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white">
-                  <h2 className="text-xl font-bold">{image.title}</h2>
-                  <p>{image.description}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-        </div>
-     
+      <ValueSection/>
         {/* end values section */}
         {/*start  martin Section */}
         <section className="martin my-10 border pt-20 py-11 px-5 border-gray-300 bg-white rounded-2xl">
@@ -195,9 +148,9 @@ export default function AboutUs() {
                     src={haythem}
                     alt="Haytham Al-Emam"
                   />
-                  <div className="absolute inset-0 flex items-end px-4 justify-between">
-                    <div className="flex flex-col text-gray-100   p-2">
-                      <p className="text-white md:text-base text-xs text-start">
+                  <div className="absolute inset-0 flex items-end pl-1 justify-between">
+                    <div className="flex flex-col text-gray-100   p-1">
+                      <p className="text-white  text-xs text-start">
                         Haytham Al-Emam
                       </p>
                       <p className="text-sm text-gray-300 text-start">
@@ -215,9 +168,9 @@ export default function AboutUs() {
                   className="h-auto max-w-full rounded-lg m-auto"
                   src={martin}
                 />
-                <div className="absolute inset-0 flex items-end px-4 justify-between">
-                  <div className="flex flex-col text-gray-100   p-2">
-                    <p className="text-white text-start">Martin Ma</p>
+                <div className="absolute inset-0 flex items-end pl-1 justify-between">
+                  <div className="flex flex-col text-gray-100   p-1">
+                    <p className="text-white text-start text-xs">Martin Ma</p>
                     <p className="text-sm text-gray-300 text-start">
                       Co-founder & CEO
                     </p>
@@ -232,9 +185,9 @@ export default function AboutUs() {
                   className="h-auto max-w-full rounded-lg m-auto"
                   src={dack}
                 />
-                <div className="absolute inset-0 flex items-end px-4 justify-between">
-                  <div className="flex flex-col text-gray-100   p-2">
-                    <p className="text-white text-start">Dack Wei</p>
+                <div className="absolute inset-0 flex items-end pl-1 justify-between">
+                  <div className="flex flex-col text-gray-100  p-1">
+                    <p className="text-white text-start text-xs">Dack Wei</p>
                     <p className="text-sm text-gray-300 text-start">CTO</p>
                   </div>
                   <CiLinkedin className="text-5xl text-gray-300 mr-2" />
@@ -247,9 +200,9 @@ export default function AboutUs() {
                   className="h-auto max-w-full rounded-lg m-auto"
                   src={other}
                 />
-                <div className="absolute inset-0 flex items-end px-4 justify-between">
-                  <div className="flex flex-col text-gray-100   p-2">
-                    <p className="text-white text-start">Leon Maa</p>
+                <div className="absolute inset-0 flex items-end pl-1 justify-between">
+                  <div className="flex flex-col text-gray-100   p-1">
+                    <p className="text-white text-start text-xs">Leon Maa</p>
                     <p className="text-sm text-gray-300 text-start"> CFO</p>
                   </div>
                   <CiLinkedin className="text-5xl text-gray-300 mr-2" />
@@ -262,9 +215,9 @@ export default function AboutUs() {
                   className="h-auto max-w-full rounded-lg m-auto"
                   src={elemam}
                 />
-                <div className="absolute inset-0 flex items-end px-4 justify-between">
-                  <div className="flex flex-col text-gray-100   p-2">
-                    <p className="text-white text-start">Ziad Al-emam</p>
+                <div className="absolute inset-0 flex items-end pl-1 justify-between">
+                  <div className="flex flex-col text-gray-100   p-1">
+                    <p className="text-white text-start text-xs">Ziad Al-emam</p>
                     <p className="text-sm text-gray-300 text-start">
                       CMO & Co-Founder
                     </p>
@@ -285,10 +238,10 @@ export default function AboutUs() {
 
         {/*start  leading providers Section */}
 
-        <section className="leading mt-3 py-14  ">
-          <div className="pb-14 text-center">
-            <h2 className="sm:text-2xl text-lg mb-5 w-2/3  py-10 sm:w-full m-auto ">
-              <span className=" py-4">{trans("Backed by")}</span>
+        <section className="leading mt-2 py-1 ">
+          <div className="pb-1 text-center">
+            <h2 className="sm:text-lg text-sm mb-1 py-5 sm:w-full m-auto ">
+              <span className="">{trans("Backed by")}</span>
 
               <strong className="">
                 {" "}
