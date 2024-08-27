@@ -52,7 +52,7 @@ const LeadingProviders: React.FC = () => {
         {trans("Wevepartneredwith")}
         </span>
       
-          <strong className="block sm:inline"> {trans("industryleadingproviders")}</strong>
+          <strong className="block sm:inline mb-3"> {trans("industryleadingproviders")}</strong>
         </h2>
 
         <Slider {...settings} className=" ">
