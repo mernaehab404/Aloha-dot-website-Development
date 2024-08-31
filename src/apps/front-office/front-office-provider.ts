@@ -1,3 +1,3 @@
 import "./design-system";
+import "./home/routes";
 import "./utils/locales";
-import "./home/routes"
