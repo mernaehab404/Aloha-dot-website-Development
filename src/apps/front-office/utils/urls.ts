@@ -23,9 +23,9 @@ const URLS = {
     termsConditions: "/terms-conditions",
     privacyPolicy: "/privacy-policy",
     viewRoute: "/pages/:slug",
-    dotchat:"/dotchat",
-    progress:"/progress",
-    joinUs:"/joinUs",
+    dotchat: "/dotchat",
+    progress: "/progress",
+    joinUs: "/joinUs",
     view: (page: any) => `/pages/${page.id}/${page.slug}`,
   },
 };

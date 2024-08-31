@@ -1,36 +1,70 @@
-import { getCurrentLocaleCode, trans } from "@mongez/localization";
-import dotchat from "../../../../../../shared/assets/images/Rectangle 44.svg";
-import dotcloud from "../../../../../../shared/assets/images/Rectangle 47.svg";
+import { trans } from "@mongez/localization";
+import dotCloud from "assets/images/dotCloud.svg";
+import dotCloudText from "assets/images/dotCloudText.svg";
+import dotMap from "assets/images/dotMap.svg";
+import dotMapText from "assets/images/dotMapsText.svg";
+import dotPay from "assets/images/dotPay.svg";
+import dotPayText from "assets/images/dotPayText.svg";
+import dotShipping from "assets/images/dotShipping.svg";
+import dotShippingText from "assets/images/dotShippingText.svg";
 
 import "../HomePage.css";
 const UpcomingProducts: React.FC = () => {
-//   console.log(getCurrentLocaleCode());
-
-  // getCurrentLocaleCode(); // ar
   return (
-    <div className="border-y border-gray-200">
+    <div className="border-b border-gray-200">
       <div className="py-14 w-4/5 m-auto ">
-        <h3 className="text-2xl leading-8 mb-5">
-          {" "}
-          {getCurrentLocaleCode() === "ar" ? (
-            <>
-              <strong>{trans("solutions")}</strong> {trans("upcoming")}
-            </>
-          ) : (
-            <>
-              <strong>{trans("upcoming")}</strong> {trans("solutions")}
-            </>
-          )}
+        <h3 className="text-2xl leading-8 mb-5 font-semibold">
+          {trans("upcomingSolutions")}
         </h3>
         <p className="mb-5 text-gray-600 sm:text-sm text-xs">
-          {trans("alohadotplans")} 
+          {trans("alohadotplans")}
         </p>
-        
-        <div className="lg:flex  lg:gap-7 grid grid-cols-2 gap-4 fade-in-image">
-          <img src={dotchat} className="lg:w-1/4" alt="dotchat" />
-          <img src={dotcloud} className="lg:w-1/4" alt="dotcloud" />
-          <img src={dotcloud} className="lg:w-1/4" alt="" />
-          <img src={dotcloud} className="lg:w-1/4" alt="" />
+
+        <div className="lg:flex  lg:gap-7 grid grid-cols-2 gap-4">
+          <div className="relative fade-in fade-in-1">
+            <img
+              src={dotMap}
+              className="rounded-2xl object-cover h-full w-full"
+              alt="dotMap"
+            />
+            <div className="absolute inset-0 bg-black opacity-50 rounded-2xl flex justify-center items-center">
+              <img src={dotMapText} className="w-4/5" alt="dotMapText" />
+            </div>
+          </div>
+          <div className="relative fade-in fade-in-2">
+            <img
+              src={dotCloud}
+              className="rounded-2xl object-cover h-full w-full"
+              alt="dotCloud"
+            />
+            <div className="absolute inset-0 bg-black opacity-65 rounded-2xl flex justify-center items-center">
+              <img src={dotCloudText} className="w-4/5" alt="dotCloudText" />
+            </div>
+          </div>
+          <div className="relative fade-in fade-in-3">
+            <img
+              src={dotShipping}
+              className="rounded-2xl object-cover h-full w-full"
+              alt="dotShipping"
+            />
+            <div className="absolute inset-0 bg-black opacity-65 rounded-2xl flex justify-center items-center">
+              <img
+                src={dotShippingText}
+                className="w-4/5"
+                alt="dotShippingText"
+              />
+            </div>
+          </div>
+          <div className="relative fade-in fade-in-4">
+            <img
+              src={dotPay}
+              className="rounded-2xl object-cover h-full w-full"
+              alt="dotShipping"
+            />
+            <div className="absolute inset-0 bg-black opacity-65 rounded-2xl flex justify-center items-center">
+              <img src={dotPayText} className="w-3/5" alt="dotPayText" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
