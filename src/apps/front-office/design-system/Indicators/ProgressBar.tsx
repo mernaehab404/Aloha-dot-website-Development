@@ -5,7 +5,7 @@ import onlinePaymentRight from "assets/images/onlinePaymentRight.svg";
 import payBills from "assets/images/payBills.svg";
 import sendPaymentLeft from "assets/images/sendPaymentLeft.svg";
 import sendPaymentRight from "assets/images/sendPaymentRight.svg";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 /**
  * Progress bar is used for lazy loading for modules
@@ -25,23 +25,23 @@ const ProgressBar: React.FC<{ id: string; children: React.ReactNode }> = ({
       setIsActive(true);
     }
   }, [inView]);
-  const [scrollPercenage, setScrollPercentage] = useState(0);
+  // const [setScrollPercentage] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPosition = (scrollTop / docHeight) * 100;
-      setScrollPercentage(scrollPosition);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollTop = window.pageYOffset;
+  //     const docHeight =
+  //       document.documentElement.scrollHeight - window.innerHeight;
+  //     const scrollPosition = (scrollTop / docHeight) * 100;
+  //     setScrollPercentage(scrollPosition);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <>
