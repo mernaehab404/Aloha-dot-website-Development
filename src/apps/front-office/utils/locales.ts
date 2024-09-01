@@ -117,7 +117,7 @@ groupedTranslations({
     ar: "ابتكار جديد في تطبيقات الدردشة",
   },
   download: {
-    en: "Download Now",
+    en: "Download Now ",
     ar: "حمله ",
   },
   downloadFrom: {
@@ -145,7 +145,7 @@ groupedTranslations({
     ar: "هناك حاليًا 7 ميزات داخل دوت شات! اكتشف كيف تبدو",
   },
   chatWithFriends: {
-    en: "<strong>Chat with</strong>friends",
+    en: "<strong>Chat  </strong>with friends",
     ar: "<strong>الدردشة</strong> مع الأصدقاء",
   },
   chatWithFriendsDesc: {
@@ -192,9 +192,9 @@ groupedTranslations({
     en: "With a dedicated business wallet, you can now collect payments from customers directly in dotchat! Enjoy the convenience of both communication and e-commerce!",
     ar: "بفضل محفظة الأعمال المخصصة، يمكنك الآن تحصيل المدفوعات من العملاء مباشرةً عبر دوت شات! استمتع براحة كل من التواصل والتجارة الإلكترونية!",
   },
-  Inventory: {
-    en: "<strong>Inventory &</strong> Shipping Management",
-    ar: "<strong>إدارة</strong>  المخزون والشحن",
+  ship: {
+    en: "<strong>Ship &</strong>  Your products",
+    ar: "<strong> شحن </strong>  منتجاتك ",
   },
   InventoryDesc: {
     en: "Manage your inventory and shipping processes efficiently within the dotchat ecosystem.",

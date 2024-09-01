@@ -57,7 +57,7 @@ export default function ValueSection() {
                   expandedIndex === index ? "opacity-100" : "opacity-0"
                 }`}>
                 <h2 className="text-3xl font-bold ">{image.title}</h2>
-                <p>{image.description}</p>
+                <p className="text-center">{image.description}</p>
               </div>
             </div>
           ))}

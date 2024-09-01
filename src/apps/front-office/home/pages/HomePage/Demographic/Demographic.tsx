@@ -6,7 +6,7 @@ function Demographic(): JSX.Element {
     <>
       <section id="demographic">
         <div className="my-10  w-4/5 m-auto  ">
-          <h3 className="text-2xl leading-8 mb-5 font-semibold">
+          <h3 className="text-2xl leading-8 mb-2 font-semibold">
             {trans("employeeDemographics")}
           </h3>
           <p className="mb-5 text-gray-600 sm:text-sm text-xs">
@@ -20,7 +20,7 @@ function Demographic(): JSX.Element {
             />
             <img
               src={chinademographic}
-              className="scale-y-105 transition-all md:w-5/12  "
+              className="scale-y-100 sm:scale-y-105 transition-all md:w-5/12  "
               alt="china"
             />
           </div>

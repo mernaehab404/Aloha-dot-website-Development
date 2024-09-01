@@ -40,39 +40,39 @@ const LeadingProviders: React.FC = () => {
           <strong> {trans("industryleadingproviders")}</strong>
         </h2>
 
-        <Slider {...settings} className=" ">
-          <div className="sm:w-80 m-auto px-3">
+        <Slider {...settings}>
+          <div className="sm:w-80 m-auto sm:px-3 px-2 ">
             {" "}
             <div className="bg-gray-100 border rounded-md sm:rounded-3xl  sm:py-11 sm:h-44  h-24  flex items-center">
               <img src={FawryLogo} className="m-auto px-2" />
             </div>
           </div>
-          <div className="sm:w-80 m-auto px-3">
+          <div className="sm:w-80 m-auto sm:px-3 px-2">
             <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24  flex items-center">
-              <img src={EtisalatLogo} className="m-auto px-2" />
+              <img src={EtisalatLogo} className="m-auto px-2 " />
             </div>
           </div>
-          <div className="sm:w-80 m-auto px-3">
+          <div className="sm:w-80 m-auto sm:px-3 px-2">
             <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center">
               <img src={paymob} className="m-auto px-2" />
             </div>
           </div>
-          <div className="sm:w-80 m-auto px-3">
+          <div className="sm:w-80 m-auto sm:px-3 px-2">
             <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center">
               <img src={img4} className="m-auto px-2" />
             </div>
           </div>
-          <div className="sm:w-80 m-auto px-3">
+          <div className="sm:w-80 m-auto sm:px-3 px-2">
             <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center">
               <img src={we} className="m-auto px-2 md:scale-150" />
             </div>
           </div>
-          <div className="sm:w-80 m-auto px-3">
+          <div className="sm:w-80 m-auto sm:px-3 px-2">
             <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center">
               <img src={flex} className="m-auto px-2 md:scale-150" />
             </div>
           </div>
-          <div className="sm:w-80 m-auto px-3">
+          <div className="sm:w-80 m-auto sm:px-3 px-2">
             <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center ">
               <img src={paytabs} className="m-auto px-2 md:scale-150 " />
             </div>

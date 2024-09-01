@@ -50,6 +50,3 @@
 .fade-in-4 {
   animation-delay: 1.5s; /* Delay for the fourth item */
 }
-.hero {
-  transform: scale(1);
-}
