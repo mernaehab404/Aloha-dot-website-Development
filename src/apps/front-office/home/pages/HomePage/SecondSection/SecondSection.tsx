@@ -11,7 +11,7 @@ import screenChatSmall from "assets/images/screenChatSmall.svg";
 import React from "react";
 const DotChatSection: React.FC = () => {
   return (
-    <>
+    <div className=" border-y border-gray-200">
       <section className="pt-24 w-11/12 m-auto overflow-hidden hidden md:flex justify-evenly flex-col items-center md:flex-row ">
         <div className="self-start">
           <img
@@ -50,38 +50,42 @@ const DotChatSection: React.FC = () => {
         </div>
       </section>
       {/* mobile size  */}
-      <section className=" md:hidden">
-        <div className="py-10 w-4/5 m-auto  border-y border-gray-200 overflow-hidden ">
-          <h4 className="mb-4 ">
-            <strong className="font-bold">{trans("dotchat")}</strong>
-            <span className="text-sm">{trans("chatAppIntro")}</span>
-          </h4>
-          <div className="flex justify-center  bg-gray-100 rounded-xl mb-5">
+      <section className=" md:hidden border-y  border-gray-200">
+        <div className="py-10 w-5/6  m-auto   overflow-hidden ">
+          <h3 className="text-2xl leading-8 mb-2 font-semibold">
+            {trans("dotchat")}
+          </h3>
+          <p className="mb-5 text-gray-600 text-sm ">{trans("chatAppIntro")}</p>
+          <div className="flex items-center  bg-gray-100 rounded-xl mb-5 ">
             <img src={screenChatSmall} className="self-end " />
             <img src={onlinePaymentSmall} className="self-end " />
           </div>
+
           {/* Download Section */}
-          <div className="border border-gray-300 rounded-xl py-3 ">
-            <div className="flex items-center justify-center gap-5  px-5 w-full">
-              <img src={qrCode} className="w-1/5 " alt="QR Code" />
-              <div className="overflow-hidden">
-                <p className="mb-4 text-xs text-center">
-                  <strong>{trans("download")}</strong> {trans("downloadFrom")}
+          <section className="my-10">
+            <div className="border rounded-xl py-6  w-11/12 m-auto flex flex-col items-center justify-center gap-5">
+              <div>
+                <img
+                  src={qrCode}
+                  className=" mb-3 m-auto w-full"
+                  alt="QR Code"
+                />
+              </div>
+              <div className="">
+                <p className="md:mb-7 mb-4 md:text-2xl text-sm">
+                  <strong>{trans("download")}</strong>
+                  {trans("downloadFrom")}
                 </p>
-                <div className="flex  justify-around">
-                  <img src={appStore} className="ml-2 w-1/2" alt="App Store" />
-                  <img
-                    src={playStore}
-                    className="justify-start w-1/2"
-                    alt="Play Store"
-                  />
+                <div className="flex justify-around w-1/2">
+                  <img src={appStore} className="w-32" alt="App Store" />
+                  <img src={playStore} className="w-32" alt="Play Store" />
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 export default DotChatSection;

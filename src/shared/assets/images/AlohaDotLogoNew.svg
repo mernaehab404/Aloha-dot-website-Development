@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1051.43 228.57">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffce03;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-2 {
+        fill: #0074ff;
+      }
+
+      .cls-6 {
+        font-family: Gilroy-ExtraBold, Gilroy;
+        font-weight: 700;
+      }
+
+      .cls-6, .cls-7 {
+        fill: #1c1c1c;
+        font-size: 134.66px;
+      }
+
+      .cls-3 {
+        fill: #1796ff;
+      }
+
+      .cls-7 {
+        font-family: Poppins-Light, Poppins;
+        font-weight: 300;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-4" x="-160" y="-112" width="1355.43" height="450.29"/>
+  <path class="cls-1" d="M161.38,148.53v36.53c0,7.04-5.73,12.76-12.77,12.76h-82.84c-7.04,0-12.77-5.72-12.77-12.76v-82.84c0-7.05,5.73-12.77,12.77-12.77h25.4v46.31c0,7.04,5.72,12.77,12.76,12.77h57.45Z"/>
+  <path class="cls-3" d="M161.38,102.22v46.31h-57.45c-7.04,0-12.76-5.73-12.76-12.77v-46.31h57.44c7.04,0,12.77,5.72,12.77,12.77Z"/>
+  <path class="cls-2" d="M199.54,52.92v82.84c0,7.04-5.73,12.77-12.77,12.77h-25.39v-46.31c0-7.05-5.73-12.77-12.77-12.77h-57.44v-36.53c0-7.04,5.72-12.77,12.76-12.77h82.84c7.04,0,12.77,5.73,12.77,12.77Z"/>
+  <text class="cls-6" transform="translate(260.13 165.3)"><tspan x="0" y="0">A</tspan><tspan class="cls-5" x="91.57" y="0">L</tspan><tspan x="150.82" y="0">OHA</tspan></text>
+  <text class="cls-7" transform="translate(725.85 165.3)"><tspan x="0" y="0">DOT</tspan></text>
+</svg>

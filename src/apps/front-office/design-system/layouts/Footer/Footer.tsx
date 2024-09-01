@@ -28,7 +28,7 @@ export default function Footer() {
   return (
     <>
       <footer className="my-5">
-        <div className=" w-11/12 py-5  m-auto bg-customBlack rounded-2xl text-white mb-3">
+        <div className="  py-5  m-auto bg-customBlack  text-white mb-3">
           <div className="flex flex-col md:flex-row py-6 w-11/12  m-auto">
             <div className="md:w-7/12 ">
               <Link to="/">
@@ -90,9 +90,33 @@ export default function Footer() {
 
                 {(socialsOpen || !isMobile) && (
                   <>
-                    <li className="text-xs mb-4">{trans("instagram")}</li>
-                    <li className="text-xs mb-4">{trans("facebook")}</li>
-                    <li className="text-xs mb-4">{trans("TikTok")}</li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/dotchat_app?igsh=MW92cmpsZ256dmowNQ%3D%3D&utm_source=qr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline text-xs mb-4">
+                        {trans("instagram")}
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="  https://www.facebook.com/profile.php?id=100080164356285&mibextid=LQQJ4d"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline text-xs mb-4">
+                        {trans("facebook")}
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://tiktok.com/@dotchat1?_t=8pM9lEyGRei&_r=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline text-xs mb-4">
+                        {trans("TikTok")}
+                      </a>
+                    </li>
                   </>
                 )}
               </ul>

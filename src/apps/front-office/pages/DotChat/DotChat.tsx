@@ -10,7 +10,6 @@ import dotchatlogo from "assets/images/dotcaht.png";
 import dotchatBGmobile from "assets/images/dotchatBGmobile.png";
 import playStore from "assets/images/googlePlay.svg";
 import inventoryLeft from "assets/images/inventoryLeft.svg";
-import inventoryRight from "assets/images/inventoryRight.svg";
 import onlinePaymentRight from "assets/images/onlinePaymentRight.svg";
 import payBills from "assets/images/payBills.svg";
 import bg from "assets/images/PM70 1.svg";
@@ -19,6 +18,7 @@ import sellProductLeft from "assets/images/sellProductLeft.svg";
 import sellProductRight from "assets/images/sellProductRight.svg";
 import sendPaymentLeft from "assets/images/sendPaymentLeft.svg";
 import sendPaymentRight from "assets/images/sendPaymentRight.svg";
+import shipYourProductsRight from "assets/images/shipYourProductsRighr.svg";
 import { useEffect, useState } from "react";
 const features = [
   {
@@ -65,10 +65,10 @@ const features = [
   },
   {
     id: 7,
-    title: "Inventory",
+    title: "ship",
     description: "InventoryDesc",
     imgDesktop: inventoryLeft,
-    imgMobile: inventoryRight,
+    imgMobile: shipYourProductsRight,
   },
 ];
 
@@ -80,16 +80,16 @@ export default function DotChat() {
     }
   }, []);
   return (
-    <div className="w-11/12 m-auto">
+    <div className="w-11/12 m-auto ">
       {/* Header Section */}
-      <header className="flex justify-center items-center mb-4">
+      <header className="flex justify-center items-center mb-4 py-9">
         <img
           src={dotchatlogo}
-          className="sm:w-1/5 w-1/4 mr-4"
+          className="sm:w-1/4 w-1/2 mr-4"
           alt="DotChat Logo"
         />
         <div
-          className={`${isArabic ? " border-r-2 " : " border-l-2"} border-red-800 px-6`}
+          className={`${isArabic ? " border-r-2 " : " border-l-2"} border-gary-200 px-6`}
           dangerouslySetInnerHTML={{
             __html: trans("dotchatIntro") as string,
           }}
@@ -142,9 +142,9 @@ export default function DotChat() {
                   feature.id % 2 === 0 ? "" : "bg-white"
                 }`}>
                 <div
-                  className={`md:w-3/5 w-full sm:block flex items-center justify-center  ${feature.id % 2 === 0 ? "order-1 md:order-2" : ""}`}>
-                  <div className="flex items-center sm:justify-start sm:text-3xl text-xl mb-7">
-                    <span className="border shadow-md rounded-2xl py-4 px-6  mr-4 ml-4">
+                  className={`md:w-3/5 w-full sm:block flex ${feature.id % 2 === 0 ? "order-1 md:order-2" : ""}`}>
+                  <div className="flex items-center sm:justify-start sm:text-2xl text-xl mb-7  ">
+                    <span className="border rounded-2xl py-4 px-6  mr-4 ml-4">
                       {feature.id}
                     </span>
                     <div
@@ -186,13 +186,19 @@ export default function DotChat() {
       {/* Download Section */}
       <section className="my-12">
         <div className="border rounded-xl py-6 md:w-11/12 w-2/3 m-auto flex md:flex-row flex-col items-center justify-center gap-5">
-          <img src={qrCode} className="w-28 mb-3 md:mb-0" alt="QR Code" />
-          <div className="text-center">
-            <p className="md:mb-7 mb-4 md:text-2xl text-xs">
+          <div>
+            <img
+              src={qrCode}
+              className=" mb-3 sm:mb-0 md:w-2/3 m-auto w-full"
+              alt="QR Code"
+            />
+          </div>
+          <div className="">
+            <p className="md:mb-7 mb-4 md:text-2xl text-sm">
               <strong>{trans("download")}</strong>
               {trans("downloadFrom")}
             </p>
-            <div className="flex justify-around">
+            <div className="flex justify-around w-1/2">
               <img src={appStore} className="md:w-56 w-32" alt="App Store" />
               <img src={playStore} className="md:w-56 w-32" alt="Play Store" />
             </div>

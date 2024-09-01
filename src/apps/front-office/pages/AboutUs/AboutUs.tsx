@@ -49,7 +49,11 @@ export default function AboutUs() {
         <div
           className="relative rounded-3xl border-gray-300  border bg-white flex justify-center items-center
        xl:h-[600px] lg:h-[520px] md:h-[400px] sm:h-[340px] h-52">
-          <img src={about} className="absolute top-0  " alt="" />
+          <img
+            src={about}
+            className="absolute top-0 sm:scale-0 scale-125 "
+            alt=""
+          />
         </div>
         <div className="ml-3 md:my-20 my-14">
           <p className="text-2xl my-5">{trans("AboutAlohadot")}</p>
@@ -81,7 +85,7 @@ export default function AboutUs() {
             <div className="relative">
               <img src={history} className=" h-72 w-full rounded-3xl" alt="" />
               <div className="absolute inset-0 bg-black/50  rounded-3xl flex items-center justify-center">
-                <div className="text-white text-4xl">
+                <div className="text-white text-center text-4xl">
                   {" "}
                   {trans("HistoryChangingMission")}
                 </div>

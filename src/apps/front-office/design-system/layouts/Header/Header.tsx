@@ -5,7 +5,7 @@ import {
   Language as LanguageIcon,
   Menu as MenuIcon,
 } from "@mui/icons-material";
-import logo from "assets/images/newLogo.png";
+import logo from "assets/images/AlohaDotLogoNew.svg";
 import { useState } from "react";
 import Headroom from "react-headroom";
 
@@ -88,11 +88,11 @@ export default function Header() {
   return (
     <div>
       <Headroom>
-        <header className="w-full bg-white  z-50 ">
-          <div className=" mx-auto flex items-center justify-between h-20 px-4 ">
+        <header className="w-full bg-white  border-b border-gray-200 z-50 ">
+          <div className=" mx-auto flex items-center justify-between h-16 px-4 ">
             <Link to="/">
               <div className="flex items-center">
-                <img src={logo} alt="Logo" className="w-full my-2" />
+                <img src={logo} alt="Logo" className="w-3/4 my-1" />
               </div>
             </Link>
 
@@ -167,8 +167,8 @@ export default function Header() {
         className={`fixed inset-0 bg-white z-40 transition-transform transform ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         } sm:hidden`}>
-        <div className="flex items-center justify-between p-4">
-          <img src={logo} alt="Logo" className="max-h-16" />
+        <div className="flex items-center justify-between p-4 border-b border-gary-200 ">
+          <img src={logo} alt="Logo" className="max-h-16 w-1/2" />
           <button onClick={handleDrawerToggle} aria-label="Close drawer">
             <MenuIcon />
           </button>

@@ -13,22 +13,22 @@ const UpcomingProducts: React.FC = () => {
   return (
     <div className="border-b border-gray-200">
       <div className="py-14 w-4/5 m-auto ">
-        <h3 className="text-2xl leading-8 mb-5 font-semibold">
+        <h3 className="text-2xl leading-8 mb-2 font-semibold ">
           {trans("upcomingSolutions")}
         </h3>
         <p className="mb-5 text-gray-600 sm:text-sm text-xs">
           {trans("alohadotplans")}
         </p>
 
-        <div className="lg:flex  lg:gap-7 grid grid-cols-2 gap-4">
+        <div className="lg:flex  lg:gap-7 grid grid-cols-2 gap-2">
           <div className="relative fade-in fade-in-1">
             <img
               src={dotMap}
               className="rounded-2xl object-cover h-full w-full"
               alt="dotMap"
             />
-            <div className="absolute inset-0 bg-black opacity-50 rounded-2xl flex justify-center items-center">
-              <img src={dotMapText} className="w-4/5" alt="dotMapText" />
+            <div className="absolute inset-0 bg-black bg-opacity-50 rounded-2xl flex justify-center items-center">
+              <img src={dotMapText} className="w-11/12 px-1" alt="dotMapText" />
             </div>
           </div>
           <div className="relative fade-in fade-in-2">
@@ -37,8 +37,12 @@ const UpcomingProducts: React.FC = () => {
               className="rounded-2xl object-cover h-full w-full"
               alt="dotCloud"
             />
-            <div className="absolute inset-0 bg-black opacity-65 rounded-2xl flex justify-center items-center">
-              <img src={dotCloudText} className="w-4/5" alt="dotCloudText" />
+            <div className="absolute inset-0 bg-black bg-opacity-65 rounded-2xl flex justify-center items-center">
+              <img
+                src={dotCloudText}
+                className="w-11/12 px-2"
+                alt="dotCloudText"
+              />
             </div>
           </div>
           <div className="relative fade-in fade-in-3">
@@ -47,10 +51,10 @@ const UpcomingProducts: React.FC = () => {
               className="rounded-2xl object-cover h-full w-full"
               alt="dotShipping"
             />
-            <div className="absolute inset-0 bg-black opacity-65 rounded-2xl flex justify-center items-center">
+            <div className="absolute inset-0 bg-black bg-opacity-65 rounded-2xl flex justify-center items-center">
               <img
                 src={dotShippingText}
-                className="w-4/5"
+                className="w-11/12 px-1"
                 alt="dotShippingText"
               />
             </div>
@@ -61,8 +65,8 @@ const UpcomingProducts: React.FC = () => {
               className="rounded-2xl object-cover h-full w-full"
               alt="dotShipping"
             />
-            <div className="absolute inset-0 bg-black opacity-65 rounded-2xl flex justify-center items-center">
-              <img src={dotPayText} className="w-3/5" alt="dotPayText" />
+            <div className="absolute inset-0 bg-black bg-opacity-65 rounded-2xl flex justify-center items-center">
+              <img src={dotPayText} className="w-4/5 px-2" alt="dotPayText" />
             </div>
           </div>
         </div>
