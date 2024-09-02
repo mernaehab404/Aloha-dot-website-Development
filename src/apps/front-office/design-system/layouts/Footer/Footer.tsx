@@ -91,31 +91,32 @@ export default function Footer() {
                 {(socialsOpen || !isMobile) && (
                   <>
                     <li>
-                      <a
-                        href="https://www.instagram.com/dotchat_app?igsh=MW92cmpsZ256dmowNQ%3D%3D&utm_source=qr"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline text-xs mb-4">
+                      {" "}
+                      <Link
+                        className="hover:underline text-xs mb-4"
+                        to="https://www.instagram.com/dotchat_app?igsh=MW92cmpsZ256dmowNQ%3D%3D&utm_source=qr"
+                        newTab>
                         {trans("instagram")}
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="  https://www.facebook.com/profile.php?id=100080164356285&mibextid=LQQJ4d"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline text-xs mb-4">
+                      {" "}
+                      <Link
+                        className="hover:underline text-xs mb-4"
+                        to="https://www.facebook.com/profile.php?id=100080164356285&mibextid=LQQJ4d"
+                        newTab>
                         {trans("facebook")}
-                      </a>
+                      </Link>
                     </li>
+
                     <li>
-                      <a
-                        href="https://tiktok.com/@dotchat1?_t=8pM9lEyGRei&_r=1"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline text-xs mb-4">
+                      {" "}
+                      <Link
+                        className="hover:underline text-xs mb-4"
+                        to="https://tiktok.com/@dotchat1?_t=8pM9lEyGRei&_r=1"
+                        newTab>
                         {trans("TikTok")}
-                      </a>
+                      </Link>
                     </li>
                   </>
                 )}
