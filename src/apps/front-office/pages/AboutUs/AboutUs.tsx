@@ -1,4 +1,4 @@
-import { trans } from "@mongez/localization";
+import { getCurrentLocaleCode, trans } from "@mongez/localization";
 import about from "assets/images/about.png";
 import img2 from "assets/images/EtisalatLogo.svg";
 import img1 from "assets/images/fawryLogo.svg";
@@ -9,11 +9,16 @@ import img3 from "assets/images/paymob.svg";
 import paytabs from "assets/images/paytabs.svg";
 import img4 from "assets/images/vodafone.svg";
 import we from "assets/images/we.svg";
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
 import ValueSection from "./ValueSection";
 export default function AboutUs() {
+  const [isArabic, setisArabic] = useState(false);
+  useEffect(() => {
+    if (getCurrentLocaleCode() == "ar") {
+      setisArabic(true);
+    }
+  }, []);
   const settings = {
     dots: false,
     infinite: true,
@@ -36,27 +41,31 @@ export default function AboutUs() {
   };
 
   return (
-    <div className=" bg-slate-50">
+    <div>
       <div className="w-11/12 md:w-4/5 m-auto">
-        <div className="py-8 md:w-11/12   m-auto ">
-          <p className="md:text-3xl text-xl md:leading-10 leading-7 pb-2  md:w-1/2  m-auto text-center">
-            {trans("alohadotIs")}
-          </p>
-          <p className="md:text-sm text-xs text-center">
-            {trans("DiscoverBelow")}
-          </p>
+        <div className="py-12 md:w-11/12   m-auto ">
+          <div className="md:text-3xl text-2xl md:leading-10 leading-8 md:w-1/2 m-auto text-center">
+            <span className="md:inline hidden">
+              {isArabic ? "تقوم بإنشاء" : "Aloha Dot is"}{" "}
+            </span>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: trans("alohadotIs") as string,
+              }}
+            />
+          </div>
         </div>
         <div
           className="relative rounded-3xl border-gray-300  border bg-white flex justify-center items-center
        xl:h-[600px] lg:h-[520px] md:h-[400px] sm:h-[340px] h-52">
           <img
             src={about}
-            className="absolute top-0 sm:scale-0 scale-125 "
-            alt=""
+            className="absolute top-0 sm:scale-[0.001px] scale-125 "
+            alt="aboutUS"
           />
         </div>
-        <div className="ml-3 md:my-20 my-14">
-          <p className="text-2xl my-5">{trans("AboutAlohadot")}</p>
+        <div className="ml-3 md:mt-20 md:mb-16 my-14">
+          <p className="text-2xl my-2">{trans("AboutAlohadot")}</p>
           <div
             className="leading-7"
             dangerouslySetInnerHTML={{
@@ -69,7 +78,7 @@ export default function AboutUs() {
             <div className="relative">
               <img src={inspire} className=" h-72 w-full rounded-3xl" alt="" />
               <div className="absolute inset-0 bg-black/50  rounded-3xl flex items-center justify-center">
-                <div className="text-white  text-4xl">
+                <div className="text-white  text-3xl">
                   {trans("inspiringVision")}
                 </div>
               </div>
@@ -85,7 +94,7 @@ export default function AboutUs() {
             <div className="relative">
               <img src={history} className=" h-72 w-full rounded-3xl" alt="" />
               <div className="absolute inset-0 bg-black/50  rounded-3xl flex items-center justify-center">
-                <div className="text-white text-center text-4xl">
+                <div className="text-white text-center text-2xl">
                   {" "}
                   {trans("HistoryChangingMission")}
                 </div>

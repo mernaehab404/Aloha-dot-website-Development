@@ -86,10 +86,10 @@ export default function Header() {
   applyFontStyles();
 
   return (
-    <div>
+    <div className="border-b border-gray-200 ">
       <Headroom>
-        <header className="w-full bg-white  border-b border-gray-200 z-50 ">
-          <div className=" mx-auto flex items-center justify-between h-16 px-4 ">
+        <header className="w-full bg-white  z-50 ">
+          <div className="mx-auto flex items-center justify-between h-16 px-4 ">
             <Link to="/">
               <div className="flex items-center">
                 <img src={logo} alt="Logo" className="w-3/4 my-1" />
@@ -118,13 +118,6 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="px-3 py-2  text-xs lg:text-sm font-medium">
-                  {/* <a
-                   onClick={changeLanguage}
-                    className="flex items-center text-gray-950 hover:text-blue-600">
-                    <LanguageIcon className="mr-1 " />
-                    
-                    EN | AR
-                  </a> */}
                   <div>
                     <LanguageIcon className="mr-1 ml-1" />
 

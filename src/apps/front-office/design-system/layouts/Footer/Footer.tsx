@@ -27,8 +27,8 @@ export default function Footer() {
   const toggleHelp = () => setHelpOpen(!helpOpen);
   return (
     <>
-      <footer className="my-5">
-        <div className="  py-5  m-auto bg-customBlack  text-white mb-3">
+      <footer className="mt-5">
+        <div className="  py-5  m-auto bg-customBlack  text-white">
           <div className="flex flex-col md:flex-row py-6 w-11/12  m-auto">
             <div className="md:w-7/12 ">
               <Link to="/">
@@ -154,9 +154,12 @@ export default function Footer() {
               <span className={`${isArabic ? "ml-4" : "mr-4"} text-xs`}>
                 {trans("privacy")}
               </span>
-              <span className={`${isArabic ? "mr-4" : "ml-4"} text-xs `}>
-                {trans("terms")}
-              </span>
+
+              <Link to="/terms-conditions">
+                <span className={`${isArabic ? "mr-4" : "ml-4"} text-xs `}>
+                  {trans("terms")}
+                </span>
+              </Link>
             </div>
             <p className="order-2 md:order-1">{trans("rights")}</p>
           </div>

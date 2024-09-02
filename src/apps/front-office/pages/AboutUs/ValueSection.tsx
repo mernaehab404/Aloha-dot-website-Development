@@ -1,5 +1,6 @@
 import { trans } from "@mongez/localization";
 import first from "assets/images/firstvalue.jpg";
+import fourth from "assets/images/fourthValue.jfif";
 import second from "assets/images/secondvalue.jfif";
 import third from "assets/images/thirdvalue.jfif";
 import { useState } from "react";
@@ -20,10 +21,14 @@ export default function ValueSection() {
     },
     {
       src: third,
-      title: "Creativity",
-      description: "Additional description here",
+      title: trans("Honesty"),
+      description: trans("HonestyDesc"),
     },
-    { src: first, title: "Innovation", description: "Some description here" },
+    {
+      src: fourth,
+      title: trans("Integrity"),
+      description: trans("IntegrityDesc"),
+    },
   ];
 
   const handleClick = index => {
@@ -43,7 +48,7 @@ export default function ValueSection() {
               onClick={() => handleClick(index)}
               className={`relative cursor-pointer overflow-hidden rounded-xl   transition-all  sm:duration-700  ease-linear ${
                 expandedIndex === index
-                  ? "w-full h-60 sm:w-full sm:h-[380px] lg:h-[480px]"
+                  ? "w-full h-[400px] sm:w-full sm:h-[380px] lg:h-[480px]"
                   : "w-full h-20 sm:w-1/6 sm:h-[380px] lg:h-[480px]"
               }`}>
               <img

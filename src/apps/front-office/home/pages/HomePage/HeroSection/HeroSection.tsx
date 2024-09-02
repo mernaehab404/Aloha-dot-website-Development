@@ -1,6 +1,6 @@
 import { getCurrentLocaleCode, trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
-import bg from "assets/images/heroSection.png";
+import bg from "assets/images/heroSectionNew.jfif";
 import { useEffect, useState } from "react";
 import "../HomePage.css";
 
