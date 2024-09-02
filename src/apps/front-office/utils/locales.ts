@@ -125,8 +125,8 @@ groupedTranslations({
     ar: " دلوقتي من على متجر التطبيقات",
   },
   dotchatIntro: {
-    en: "<strong>A revolutionary</strong> all-in-one app",
-    ar: "تطبيق <strong>ثوري</strong> متعدد الإمكانات",
+    en: "<strong>A innovative </strong> all-in-one app",
+    ar: "تطبيق <strong>ابداعي </strong> متعدد الإمكانات",
   },
   aboutDotchat: {
     en: " <strong>About</strong> DotChat",
@@ -381,8 +381,8 @@ groupedTranslations({
     ar: "شكل البريد الإلكتروني غير صحيح",
   },
   alohadotIs: {
-    en: " Alohadot is creating ground breaking solutions in all domains",
-    ar: "تقوم شركة ألوها دوت بإنشاء حلول رائدة في جميع المجالات",
+    en: "Creating <strong> ground breaking </strong> solutions in all domains",
+    ar: "تقوم بإنشاء   <strong> حلول رائدة </strong>  في جميع المجالات",
   },
   DiscoverBelow: {
     en: "Discover below how Alohadot’s revolutionary vision will change the world",
@@ -405,11 +405,11 @@ groupedTranslations({
     ar: "مهمة تغيير التاريخ",
   },
   OurVision: {
-    en: " <strong> Our vision</strong> is to create a  <strong>groundbreaking innovation</strong> in the digital landscape for communication, mapping, cloud storage, shipping, and more. We aspire to lead a new era of interconnected digital  services that enhance everyday life and business across every country we serve.",
+    en: " <strong> Our vision</strong> is to create a  <strong>ground breaking innovation</strong> in the digital landscape for communication, mapping, cloud storage, shipping, and more. We aspire to lead a new era of interconnected digital  services that enhance everyday life and business across every country we serve.",
     ar: "<strong>تتمثل رؤيتنا </strong>في خلق ابتكارات رائدة في المشهد الرقمي للاتصالات ورسم الخرائط والتخزين السحابي والشحن والمزيد. نطمح إلى قيادة حقبة جديدة من الخدمات الرقمية المترابطة التي تعزز الحياة اليومية والأعمال في كل بلد نخدمه.",
   },
   OurMission: {
-    en: "<strong> OurMission</strong> is to enhance <strong>everyday life by creating digital ecosystems</strong> that empower users and businesses to effortlessly communicate, process payments, manage operations, and handle logistics.",
+    en: "<strong> Our Mission </strong> is to enhance everyday life by creating   <strong>digital ecosystems</strong> that empower users and businesses to effortlessly communicate, process payments, manage operations, and handle logistics.",
     ar: "<strong> مهمتنا هي</strong>   تعزيز الحياة اليومية من خلال إنشاء أنظمة بيئية رقمية تمكن المستخدمين والشركات من التواصل بسهولة ومعالجة المدفوعات وإدارة العمليات والتعامل مع الخدمات اللوجستية.",
   },
   AlohadotValues: {
@@ -431,6 +431,22 @@ groupedTranslations({
   TeamworkDesc: {
     en: "Without teamwork, we can’t achieve our revolutionary goals",
     ar: "بدون العمل الجماعي لا نستطيع تحقيق أهدافنا الثورية ",
+  },
+  Integrity: {
+    en: "Integrity",
+    ar: "المصداقية",
+  },
+  IntegrityDesc: {
+    en: " staying true to your values and consistently doing what's right.",
+    ar: "ابقي مخلصًا لقيمك والقيام دائمًا بما هو صحيح.",
+  },
+  Honesty: {
+    en: "Honesty",
+    ar: "الصدق ",
+  },
+  HonestyDesc: {
+    en: "Being truthful and transparent in all interactions.",
+    ar: "كونك صادق وشفاف في كلامك وأفعالك",
   },
   alohadotAims: {
     en: "“Alohadot aims to create a <strong>digital revolution</strong> that will transform the everyday lives of millions of people in the middle east”",

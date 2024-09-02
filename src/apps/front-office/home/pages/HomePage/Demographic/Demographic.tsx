@@ -5,7 +5,7 @@ function Demographic(): JSX.Element {
   return (
     <>
       <section id="demographic">
-        <div className="my-10  w-4/5 m-auto  ">
+        <div className="my-10  w-11/12 m-auto  ">
           <h3 className="text-2xl leading-8 mb-2 font-semibold">
             {trans("employeeDemographics")}
           </h3>
