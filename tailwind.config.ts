@@ -13,6 +13,7 @@ const config = {
       minHeight: {
         "10vh": "10vh", // Adding custom min-height for 40vh
         "70vh": "70vh", // Adding custom min-height for 70vh
+        "90vh": "90vh", // Adding custom min-height for 70vh
       },
     },
   },

@@ -1,11 +1,12 @@
 import { trans } from "@mongez/localization";
-import EtisalatLogo from "assets/images/EtisalatLogo.svg";
-import FawryLogo from "assets/images/fawryLogo.svg";
+import img2 from "assets/images/EtisalatLogo.svg";
+import img1 from "assets/images/fawryLogo.svg";
 import flex from "assets/images/flextock.svg";
-import paymob from "assets/images/paymob.svg";
+import img3 from "assets/images/paymob.svg";
 import paytabs from "assets/images/paytabs.svg";
 import img4 from "assets/images/vodafone.svg";
 import we from "assets/images/we.svg";
+
 import React from "react";
 import Slider from "react-slick";
 
@@ -32,53 +33,50 @@ const settings = {
 
 const LeadingProviders: React.FC = () => {
   return (
-    <section className="mt-3 py-5  ">
-      <div className="pb-14 text-center">
-        <h2 className="sm:text-2xl text-lg mb-2 w-2/3  py-5 sm:w-full m-auto ">
-          <span>{trans("Wevepartneredwith")}</span>
+    <section className="mt-3 py-5 w-11/12 m-auto">
+      <h3 className="text-3xl leading-8 font-semibold">
+        {trans("Our Providers")}
+      </h3>
 
-          <strong> {trans("industryleadingproviders")}</strong>
-        </h2>
-
-        <Slider {...settings}>
-          <div className="sm:w-80 m-auto sm:px-3 px-2 ">
-            {" "}
-            <div className="bg-gray-100 border rounded-md sm:rounded-3xl  sm:py-11 sm:h-44  h-24  flex items-center">
-              <img src={FawryLogo} className="m-auto px-2" />
-            </div>
+      <Slider {...settings} className=" ">
+        <div className="sm:w-80 m-auto px-3">
+          {" "}
+          {/* Adjust  to increase or decrease the gap */}
+          <div className="  sm:py-11 sm:h-44  h-24  flex items-center">
+            <img src={img1} className="m-auto px-2" />
           </div>
-          <div className="sm:w-80 m-auto sm:px-3 px-2">
-            <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24  flex items-center">
-              <img src={EtisalatLogo} className="m-auto px-2 " />
-            </div>
+        </div>
+        <div className="sm:w-80 m-auto px-3">
+          <div className=" sm:py-11 sm:h-44 h-24  flex items-center">
+            <img src={img2} className="m-auto px-2" />
           </div>
-          <div className="sm:w-80 m-auto sm:px-3 px-2">
-            <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center">
-              <img src={paymob} className="m-auto px-2" />
-            </div>
+        </div>
+        <div className="sm:w-80 m-auto px-3">
+          <div className=" sm:py-11 sm:h-44 h-24 flex items-center">
+            <img src={img3} className="m-auto px-2" />
           </div>
-          <div className="sm:w-80 m-auto sm:px-3 px-2">
-            <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center">
-              <img src={img4} className="m-auto px-2" />
-            </div>
+        </div>
+        <div className="sm:w-80 m-auto px-3">
+          <div className=" sm:py-11 sm:h-44 h-24 flex items-center">
+            <img src={img4} className="m-auto px-2" />
           </div>
-          <div className="sm:w-80 m-auto sm:px-3 px-2">
-            <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center">
-              <img src={we} className="m-auto px-2 md:scale-150" />
-            </div>
+        </div>
+        <div className="sm:w-80 m-auto px-3">
+          <div className="sm:py-11 sm:h-44 h-24 flex items-center">
+            <img src={we} className="m-auto px-2 md:scale-150" />
           </div>
-          <div className="sm:w-80 m-auto sm:px-3 px-2">
-            <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center">
-              <img src={flex} className="m-auto px-2 md:scale-150" />
-            </div>
+        </div>
+        <div className="sm:w-80 m-auto px-3">
+          <div className="sm:py-11 sm:h-44 h-24 flex items-center">
+            <img src={flex} className="m-auto px-2 md:scale-150" />
           </div>
-          <div className="sm:w-80 m-auto sm:px-3 px-2">
-            <div className="bg-gray-100 border rounded-md  sm:rounded-3xl sm:py-11 sm:h-44 h-24 flex items-center ">
-              <img src={paytabs} className="m-auto px-2 md:scale-150 " />
-            </div>
+        </div>
+        <div className="sm:w-80 m-auto px-3">
+          <div className="sm:py-11 sm:h-44 h-24 flex items-center ">
+            <img src={paytabs} className="m-auto px-2 md:scale-150 " />
           </div>
-        </Slider>
-      </div>
+        </div>
+      </Slider>
     </section>
   );
 };

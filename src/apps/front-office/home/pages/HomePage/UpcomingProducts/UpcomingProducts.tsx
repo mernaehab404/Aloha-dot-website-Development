@@ -1,72 +1,91 @@
 import { trans } from "@mongez/localization";
-import dotCloud from "assets/images/dotCloud.svg";
-import dotCloudText from "assets/images/dotCloudText.svg";
-import dotMap from "assets/images/dotMap.svg";
-import dotMapText from "assets/images/dotMapsText.svg";
-import dotPay from "assets/images/dotPay.svg";
-import dotPayText from "assets/images/dotPayText.svg";
-import dotShipping from "assets/images/dotShipping.svg";
-import dotShippingText from "assets/images/dotShippingText.svg";
+import dotchatimg from "assets/images/dotchatimg.svg";
+import dotcloudSolution from "assets/images/dotcloudSolution.svg";
+import VectorDotCloud from "assets/images/dotcloudvector.svg";
+import dotmapSolution from "assets/images/dotmapSolution.svg";
+import VectorDotMap from "assets/images/dotmapVector.svg";
+import dotpaySolution from "assets/images/dotpaySolution.svg";
+import vectorDotChat from "assets/images/VectorDotChat.svg";
+import VectorDotPay from "assets/images/VectorPayy.svg";
 
 import "../HomePage.css";
 const UpcomingProducts: React.FC = () => {
   return (
-    <div className="border-b border-gray-200">
-      <div className="pt-14 pb-20 w-11/12 m-auto">
-        <h3 className="text-2xl leading-8 mb-2 font-semibold ">
-          {trans("upcomingSolutions")}
-        </h3>
-        <p className="mb-5 text-gray-600 sm:text-sm text-xs">
-          {trans("alohadotplans")}
-        </p>
+    <div>
+      <div className="pb-10 m-auto bg-gradient-to-br from-[#deebfe] via-[#fff8d9] to-[#fff8d9] bg-opacity-80 backdrop-blur-3xl w-full">
+        <div className="w-11/12 mx-auto">
+          {" "}
+          {/* Constraining the content width */}
+          <h3 className="text-3xl leading-8 font-semibold">
+            {trans("Our Solutions")}
+          </h3>
+        </div>
+      </div>
+      <div className="bg-gradient-to-b from-[#fff8d9] to-neutral-50 bg-opacity-80 w-full">
+        <div className="overflow-x-scroll lg:overflow-auto scrollbar-hide w-full">
+          <div className="flex lg:grid lg:grid-cols-4 gap-4 w-[90%] lg:w-11/12 m-auto">
+            <div className="flex-shrink-0 flex flex-col justify-end bg-blue-50 rounded-2xl w-[75%] lg:w-full">
+              <div className="px-5">
+                <div className="flex items-center space-x-2 mb-3">
+                  <img src={vectorDotChat} alt="" />
+                  <p className="font-bold text-xl text-[#0561E9]">DotChat</p>
+                </div>
+                <p className="text-sky-700 text-base md:w-[48%]">
+                  a revolutionally all-in-one app
+                </p>
+              </div>
+              <img
+                src={dotchatimg}
+                className="w-full h-auto rounded-b-2xl"
+                alt=""
+              />
+            </div>
 
-        <div className="grid lg:grid-cols-4 grid-cols-2  lg:gap-7 gap-2 ">
-          <div className="relative fade-in fade-in-1">
-            <img
-              src={dotMap}
-              className="object-cover h-full w-full rounded-2xl"
-              alt="dotMap"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-50 rounded-2xl flex justify-center items-center">
-              <img src={dotMapText} className="px-2" alt="dotMapText" />
-            </div>
-          </div>
-          <div className="relative fade-in fade-in-2">
-            <img
-              src={dotCloud}
-              className="object-cover h-full w-full rounded-2xl"
-              alt="dotCloud"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-65 rounded-2xl flex justify-center items-center">
+            <div className="flex-shrink-0 flex flex-col justify-between bg-blue-50 rounded-2xl w-[75%] lg:w-full px-5">
+              <div className="mt-5">
+                <div className="flex items-center space-x-2 mb-3">
+                  <img src={VectorDotPay} alt="" />
+                  <p className="font-bold text-xl text-[#0561E9]">DotPay</p>
+                </div>
+                <p className="text-sky-700 text-base md:w-[48%]">
+                  easy pay for all your payments
+                </p>
+              </div>
               <img
-                src={dotCloudText}
-                className="lg:px-2 px-3"
-                alt="dotCloudText"
+                src={dotpaySolution}
+                className="w-full h-auto rounded-b-2xl"
+                alt=""
               />
             </div>
-          </div>
-          <div className="relative fade-in fade-in-3">
-            <img
-              src={dotShipping}
-              className="object-cover h-full w-full rounded-2xl"
-              alt="dotShipping"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-65 rounded-2xl flex justify-center items-center">
+
+            <div className="flex-shrink-0 flex flex-col justify-between bg-blue-50 rounded-2xl w-[75%] lg:w-full px-5">
+              <div>
+                <div className="flex items-center space-x-2 my-5">
+                  <img src={VectorDotCloud} alt="" />
+                  <p className="font-bold text-xl text-[#0561E9]">DotCloud</p>
+                </div>
+                <p className="text-sky-700 text-base">Coming soon</p>
+              </div>
               <img
-                src={dotShippingText}
-                className=" px-1"
-                alt="dotShippingText"
+                src={dotcloudSolution}
+                className="w-full h-auto rounded-b-2xl"
+                alt=""
               />
             </div>
-          </div>
-          <div className="relative fade-in fade-in-4">
-            <img
-              src={dotPay}
-              className="object-cover h-full w-full rounded-2xl"
-              alt="dotShipping"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-65 rounded-2xl flex justify-center items-center">
-              <img src={dotPayText} className="lg:px-3 px-5" alt="dotPayText" />
+
+            <div className="flex-shrink-0 flex flex-col justify-between bg-blue-50 rounded-2xl w-[75%] lg:w-full px-5">
+              <div>
+                <div className="flex items-center space-x-2 my-5">
+                  <img src={VectorDotMap} alt="" />
+                  <p className="font-bold text-xl text-[#0561E9]">DotMap</p>
+                </div>
+                <p className="text-sky-700 text-base">Coming soon</p>
+              </div>
+              <img
+                src={dotmapSolution}
+                className="w-full h-auto rounded-b-2xl"
+                alt=""
+              />
             </div>
           </div>
         </div>

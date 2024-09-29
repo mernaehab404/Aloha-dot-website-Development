@@ -5,10 +5,14 @@ import {
   Language as LanguageIcon,
   Menu as MenuIcon,
 } from "@mui/icons-material";
-import logo from "assets/images/AlohaDotLogoNew.svg";
+import logo from "assets/images/logoNewPng.png";
+import vectorDotChat from "assets/images/VectorDotchat.png";
+import vectorDotCloud from "assets/images/VectorDotCloud.png";
+import vectorDotMap from "assets/images/VectorDotMap.png";
+import vectorDotpay from "assets/images/VectorDotPay.png";
+import vectorDotShipping from "assets/images/VectorDotShipping.png";
 import { useState } from "react";
 import Headroom from "react-headroom";
-
 export default function Header() {
   const currentLanguage = getCurrentLocaleCode();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -86,45 +90,158 @@ export default function Header() {
   applyFontStyles();
 
   return (
-    <div className="border-b border-gray-200 ">
+    <div className="bg-gradient-to-br pt-5 from-[#deebfe] to-[#fff8d9]">
       <Headroom>
-        <header className="w-full bg-white  z-50 ">
-          <div className="mx-auto flex items-center justify-between h-16 px-4 ">
+        <header className="w-11/12 m-auto shadow-lg border border-gray-100 rounded-2xl  bg-white  z-50">
+          <div className="mx-auto flex items-center justify-between h-16 px-4">
             <Link to="/">
               <div className="flex items-center">
-                <img src={logo} alt="Logo" className="w-3/4 my-1" />
+                <img src={logo} alt="Logo" className="my-1" />
               </div>
             </Link>
 
             <nav className="hidden sm:flex space-x-4">
-              <ul className="flex  justify-center items-center">
-                <li className="px-3 py-2 text-xs lg:text-sm font-medium">
+              <ul className="grid grid-cols-5 ">
+                {/* Home */}
+                <li className="py-2 text-xs lg:text-base font-medium">
                   <Link to="/" className="text-blue-600">
                     {trans("home")}
                   </Link>
                 </li>
-                <li className="px-3 py-2  text-xs lg:text-sm font-medium">
-                  <Link
-                    to="/dotchat"
-                    className="text-gray-950 hover:text-blue-600">
-                    {trans("solutions")}{" "}
+
+                {/* Solutions with Dropdown */}
+                <li className="relative py-2 text-xs lg:text-base font-medium group">
+                  <Link to="#" className="text-gray-950 hover:text-blue-600">
+                    {trans("solutions")}
                   </Link>
+
+                  {/* Dropdown */}
+                  <div className="absolute hidden group-hover:block bg-white w-[508px] shadow-lg rounded-lg mt-2 p-6">
+                    <div className="grid grid-cols-2 gap-6">
+                      {/* Dotchat */}
+                      <div className="flex items-center space-x-3">
+                        <img
+                          src={vectorDotChat}
+                          alt="Dotchat"
+                          className="w-10 h-10"
+                        />
+                        <div>
+                          <Link
+                            to="/dotchat"
+                            className="text-blue-600 font-semibold text-base">
+                            Dotchat
+                          </Link>
+                          <span className="block text-gray-400 text-sm">
+                            Innovative all-in-one app
+                          </span>
+                        </div>
+                      </div>
+                      {/* DotShipping */}
+                      <div className="flex items-center space-x-3">
+                        <img
+                          src={vectorDotShipping}
+                          alt="DotShipping"
+                          className="w-10 h-10 opacity-50"
+                        />
+                        <div>
+                          <span className="text-gray-400 font-semibold text-base">
+                            DotShipping
+                          </span>
+                          <span className="block text-gray-400 text-sm">
+                            Coming Soon
+                          </span>
+                        </div>
+                      </div>
+                      {/* Dotpay */}
+                      <div className="flex items-center space-x-3">
+                        <img
+                          src={vectorDotpay}
+                          alt="Dotpay"
+                          className="w-10 h-10"
+                        />
+                        <div>
+                          <Link
+                            to="/dotpay"
+                            className="text-blue-600 font-semibold text-base">
+                            Dotpay
+                          </Link>
+                          <span className="block text-gray-400 text-sm">
+                            Easy payment solutions
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Dotcloud */}
+                      <div className="flex items-center space-x-3">
+                        <img
+                          src={vectorDotCloud}
+                          alt="Dotcloud"
+                          className="w-10 h-10 opacity-50"
+                        />
+                        <div>
+                          <span className="text-gray-400 font-semibold text-base">
+                            Dotcloud
+                          </span>
+                          <span className="block text-gray-400 text-sm">
+                            Coming Soon
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Dotmap */}
+                      <div className="flex items-center space-x-3">
+                        <img
+                          src={vectorDotMap}
+                          alt="Dotmap"
+                          className="w-10 h-10 opacity-50"
+                        />
+                        <div>
+                          <span className="text-gray-400 font-semibold text-base">
+                            Dotmap
+                          </span>
+                          <span className="block text-gray-400 text-sm">
+                            Coming Soon
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Dotschool */}
+                      <div className="flex items-center space-x-3">
+                        <img
+                          src={vectorDotShipping}
+                          alt="Dotschool"
+                          className="w-10 h-10 opacity-50"
+                        />
+                        <div>
+                          <span className="text-gray-400 font-semibold text-base">
+                            Dotschool
+                          </span>
+                          <span className="block text-gray-400 text-sm">
+                            Coming Soon
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
-                <li className="px-3 py-2  text-xs lg:text-sm font-medium">
+
+                {/* About Us */}
+                <li className="py-2 text-xs lg:text-base font-medium">
                   <Link
                     to="/about-us"
                     className="text-gray-950 hover:text-blue-600">
                     {trans("about")}
                   </Link>
                 </li>
-                <li className="px-3 py-2  text-xs lg:text-sm font-medium">
+
+                {/* Language Switcher */}
+                <li className="py-2 text-xs lg:text-base font-medium">
                   <div>
                     <LanguageIcon className="mr-1 ml-1" />
-
                     <a
                       href="#"
                       style={{
-                        color: currentLanguage === "en" ? "blue" : "black",
+                        color: currentLanguage === "en" ? "black" : "gray",
                       }}
                       onClick={() => changeLanguage()}>
                       {trans("EN")}
@@ -133,20 +250,23 @@ export default function Header() {
                     <a
                       href="#"
                       style={{
-                        color: currentLanguage === "ar" ? "blue" : "black",
+                        color: currentLanguage === "ar" ? "black" : "gray",
                       }}
                       onClick={() => changeLanguage()}>
                       {trans("AR")}
                     </a>
                   </div>
                 </li>
+
+                {/* Contact Us */}
                 <Link to="/contact-us">
-                  <button className="rounded-full bg-blue-600 px-3 py-2 text-xs lg:text-sm font-medium text-white hover:text-black hover:bg-transparent border hover:border-black">
+                  <button className="rounded-xl bg-blue-100 px-3 py-2 text-xs lg:text-base font-medium text-blue-600 hover:text-black hover:bg-transparent border hover:border-black">
                     {trans("contact")}
                   </button>
                 </Link>
               </ul>
             </nav>
+
             <button
               className="text-black sm:hidden"
               onClick={handleDrawerToggle}

@@ -145,8 +145,8 @@ groupedTranslations({
     ar: "هناك حاليًا 7 ميزات داخل دوت شات! اكتشف كيف تبدو",
   },
   chatWithFriends: {
-    en: "<strong>Chat  </strong>with friends",
-    ar: "<strong>الدردشة</strong> مع الأصدقاء",
+    en: "Chat with friends & Business",
+    ar: "الدردشة مع الأصدقاء",
   },
   chatWithFriendsDesc: {
     en: "Chat with your friends, family members, or contact businesses to learn more about their products, prices, locations, or ask any questions.",

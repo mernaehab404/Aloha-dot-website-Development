@@ -1,10 +1,11 @@
 import { trans } from "@mongez/localization";
 import Helmet from "@mongez/react-helmet";
-import Demographic from "./Demographic/Demographic";
-import HeroSection from "./HeroSection/HeroSection";
+
+import DotChat from "./DotChatSection/DotChatSection";
+import HeroSectionNew from "./HeroSectionNew/HeroSectionNew";
 import "./HomePage.css";
 import LeadingProviders from "./LeadingProviders/LeadingProviders";
-import DotChatSection from "./SecondSection/SecondSection";
+import SecondSection from "./SecondSection/SecondSection";
 import UpcomingProducts from "./UpcomingProducts/UpcomingProducts";
 
 export default function HomePage() {
@@ -12,11 +13,14 @@ export default function HomePage() {
     <>
       <Helmet title={trans("home")} appendAppName={false} />
       <div className="overflow-hidden">
-        <HeroSection />
+        {/* <HeroSection /> */}
+        <HeroSectionNew />
         <UpcomingProducts />
-        <Demographic />
-        <DotChatSection />
         <LeadingProviders />
+        {/* <Demographic /> */}
+        {/* <DotChatSection /> */}
+        <SecondSection />
+        <DotChat />
       </div>
     </>
   );

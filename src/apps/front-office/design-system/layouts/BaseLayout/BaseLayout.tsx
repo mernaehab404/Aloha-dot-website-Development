@@ -11,7 +11,7 @@ export type BaseLayoutProps = {
  */
 export default function BaseLayout({ children }: BaseLayoutProps) {
   return (
-    <div>
+    <div className="">
       <Header />
       <main>{children}</main>
       <Footer />

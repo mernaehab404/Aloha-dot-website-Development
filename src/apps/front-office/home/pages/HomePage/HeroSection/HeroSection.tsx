@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div className=" h-full  flex items-center justify-center mt-7 sm:py-0 ">
+    <div className="bg-gradient-to-r from-blue-50 to-yellow-50 h-full  flex items-center justify-center mt-7 sm:py-0 ">
       <div
         className="hero w-11/12  bg-no-repeat rounded-2xl overflow-hidden flex flex-col justify-center bg-cover bg-center sm:min-h-70vh  py-8"
         style={{
