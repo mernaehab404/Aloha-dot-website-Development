@@ -33,7 +33,7 @@ const settings = {
 
 const LeadingProviders: React.FC = () => {
   return (
-    <section className="mt-3 py-5 w-11/12 m-auto">
+    <section className="py-16 w-11/12 m-auto my-20">
       <h3 className="text-3xl leading-8 font-semibold">
         {trans("Our Providers")}
       </h3>

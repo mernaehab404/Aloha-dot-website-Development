@@ -1,20 +1,18 @@
 import { trans } from "@mongez/localization";
-import contact from "assets/images/contacct.jpeg";
 import { GrLocation } from "react-icons/gr";
 export default function ContactUs() {
   return (
     //
-    <section className="bg-gray-100 py-7">
-      <div className="w-11/12  md:w-3/4 m-auto ">
+    <section className="bg-gray-100 ">
+      <div className="">
         {/* <!-- Top Section: Image and Title --/> */}
-        <div className="bg-white relative rounded-3xl overflow-hidden  mb-4">
-          <img
+        <div className="overflow-hidden text-center">
+          {/* <img
             src={contact}
             alt="Contact Us"
             className="w-full h-64 object-cover"
-          />
-          <div className="absolute inset-0 bg-black opacity-50  rounded-3xl"></div>
-          <div className="absolute inset-0 flex items-center ">
+          /> */}
+          <div className="flex items-center justify-center bg-blue-600">
             <div className="p-6">
               <h2 className="text-3xl font-bold mb-2 text-white">
                 {trans("contact")}
@@ -25,9 +23,9 @@ export default function ContactUs() {
         </div>
 
         {/* <!-- Form and Contact Information Section --> */}
-        <div className="rounded-lg overflow-hidden flex flex-col md:flex-row gap-7">
+        <div className="w-11/12  md:w-3/4 m-auto  rounded-xl bg-white  border border-gray-300 overflow-hidden flex flex-col md:flex-row gap-7">
           {/* <!-- Left Column: Contact Form --> */}
-          <div className="bg-white md:w-1/2 p-6 border border-gray-300 rounded-xl">
+          <div className="bg-white md:w-1/2 p-6">
             <h3 className="text-xl font-semibold mb-4">Send us a message</h3>
             <form>
               <div className="mb-4">
@@ -58,7 +56,7 @@ export default function ContactUs() {
           </div>
           {/* 
     <!-- Right Column: Contact Information --> */}
-          <div className="bg-white md:w-1/2 p-6 border border-gray-300 rounded-xl">
+          <div className="bg-white md:w-1/2 p-6">
             <div className="mb-4">
               <div className="flex items-center">
                 <i className="fa-solid fa-phone text-blue-600  bg-blue-200 p-3 text-xl rounded-lg "></i>

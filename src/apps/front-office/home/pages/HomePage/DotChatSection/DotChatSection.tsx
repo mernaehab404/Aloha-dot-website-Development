@@ -3,10 +3,10 @@ import dotChatWithLogo from "assets/images/dotchatWithLogo.svg";
 import applyStore from "assets/images/downloadApple.svg";
 import googleStore from "assets/images/downloadPlay.svg";
 import qr from "assets/images/QR.svg";
-export default function DotChat() {
+export default function DotChatSection() {
   return (
     <div>
-      <div className="w-4/5 m-auto bg-blue-600  rounded-xl py-16 flex flex-col lg:flex-row  justify-evenly">
+      <div className="lg:w-4/5 w-11/12 m-auto bg-blue-600  rounded-xl py-16 flex flex-col lg:flex-row lg:gap-0 gap-4 justify-evenly my-10">
         {/* Left section with app description */}
         <div className="text-center lg:text-left flex flex-col items-center md:items-start justify-evenly">
           <div>
@@ -34,7 +34,9 @@ export default function DotChat() {
 
         {/* Right section with QR code */}
         <div className="flex flex-col items-center">
-          <p className="text-white text-xl mb-2">Or Scan QR Code to download</p>
+          <p className="text-white text-xl mb-10">
+            Or Scan QR Code to download
+          </p>
 
           <div className="bg-white flex flex-col items-center p-10 rounded-xl">
             <img src={qr} alt="QR Code" className="" />

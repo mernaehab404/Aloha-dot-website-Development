@@ -1,207 +1,117 @@
-import { getCurrentLocaleCode, trans } from "@mongez/localization";
-import appStore from "assets/images/appStore.svg";
-import chatWithFreinds from "assets/images/chatWithFreinds.svg";
-import chatWithFreindsRight from "assets/images/chatWithFreindsRight.svg";
-import collectMoneyRight from "assets/images/collectMoneyRight.svg";
-import collectMoneyScreen from "assets/images/collectMoneyScreen.svg";
-import discoverFeed from "assets/images/discoverFeed.svg";
-import discoverFeedRight from "assets/images/discoverFeedRight.svg";
-import dotchatlogo from "assets/images/dotcaht.png";
-import dotchatBGmobile from "assets/images/dotchatBGmobile.png";
-import playStore from "assets/images/googlePlay.svg";
-import inventoryLeft from "assets/images/inventoryLeft.svg";
-import onlinePaymentRight from "assets/images/onlinePaymentRight.svg";
-import payBills from "assets/images/payBills.svg";
-import bg from "assets/images/PM70 1.svg";
-import qrCode from "assets/images/QR.svg";
-import sellProductLeft from "assets/images/sellProductLeft.svg";
-import sellProductRight from "assets/images/sellProductRight.svg";
-import sendPaymentLeft from "assets/images/sendPaymentLeft.svg";
-import sendPaymentRight from "assets/images/sendPaymentRight.svg";
-import shipYourProductsRight from "assets/images/shipYourProductsRighr.svg";
+import { getCurrentLocaleCode } from "@mongez/localization";
+import appStoreWhite from "assets/images/appStoreWhite.svg";
+import googlePlay from "assets/images/googleplayWhite'.svg";
+import hands from "assets/images/Handsvg.svg";
 import { useEffect, useState } from "react";
-const features = [
-  {
-    id: 1,
-    title: "chatWithFriends",
-    description: "chatWithFriendsDesc",
-    imgDesktop: chatWithFreinds,
-    imgMobile: chatWithFreindsRight,
-  },
-  {
-    id: 2,
-    title: "SendPayments",
-    description: "SendPaymentsDesc",
-    imgDesktop: sendPaymentRight,
-    imgMobile: sendPaymentLeft,
-  },
-  {
-    id: 3,
-    title: "payBills",
-    description: "payBillsDesc",
-    imgDesktop: payBills,
-    imgMobile: onlinePaymentRight,
-  },
-  {
-    id: 4,
-    title: "DiscoverProducts",
-    description: "DiscoverProductsDesc",
-    imgDesktop: discoverFeedRight,
-    imgMobile: discoverFeed,
-  },
-  {
-    id: 5,
-    title: "SellProducts",
-    description: "SellProductsDesc",
-    imgDesktop: sellProductLeft,
-    imgMobile: sellProductRight,
-  },
-  {
-    id: 6,
-    title: "collectMoney",
-    description: "collectMoneyDesc",
-    imgDesktop: collectMoneyRight,
-    imgMobile: collectMoneyScreen,
-  },
-  {
-    id: 7,
-    title: "ship",
-    description: "InventoryDesc",
-    imgDesktop: inventoryLeft,
-    imgMobile: shipYourProductsRight,
-  },
-];
-
-export default function DotChat() {
+import { FaLandmarkFlag, FaMoneyBills } from "react-icons/fa6";
+import { PiHandCoins } from "react-icons/pi";
+import { TbDatabaseImport } from "react-icons/tb";
+export default function DotChatPage() {
   const [isArabic, setisArabic] = useState(false);
   useEffect(() => {
     if (getCurrentLocaleCode() == "ar") {
       setisArabic(true);
     }
   }, []);
+
   return (
-    <div className="w-11/12 m-auto ">
-      {/* Header Section */}
-      <header className="flex justify-center items-center mb-4 py-9">
-        <img
-          src={dotchatlogo}
-          className="sm:w-1/4 w-1/2 mr-4"
-          alt="DotChat Logo"
-        />
-        <div
-          className={`${isArabic ? " border-r-2 " : " border-l-2"} border-gary-200 px-6`}
-          dangerouslySetInnerHTML={{
-            __html: trans("dotchatIntro") as string,
-          }}
-        />
-      </header>
+    <div className="">
+      <section className="bg-blue-600 flex flex-col justify-center items-center pt-24 overflow-hidden">
+        <div className="">
+          <div className="m-auto lg:w-3/5 w-4/5">
+            <p className="font-bold text-white lg:text-5xl text-3xl mb-4 leading-10">
+              All - in one App for social and payment
+            </p>
+            <p className="text-white text-lg max-w-2xl mb-8 lg:inline-block hidden">
+              social communication app integrates features like payment,
+              mini-ecommerce, marketing, and social services.
+            </p>
 
-      {/* Background Image Section */}
-      <section className=" rounded-2xl p-1">
-        <img
-          src={bg}
-          className="sm:w-full w-0 sm:block hidden"
-          alt="DotChat Background"
-        />
-        <img
-          src={dotchatBGmobile}
-          className="w-full sm:hidden block"
-          alt="DotChat Background"
-        />
-      </section>
+            <div className="flex gap-6 mb-10 justify-center">
+              <img src={appStoreWhite} alt="App Store" />
+              <img src={googlePlay} alt="Google Play" />
+            </div>
+          </div>
 
-      {/* About Section */}
-      <section className="my-12">
-        <div
-          className="text-3xl my-5"
-          dangerouslySetInnerHTML={{
-            __html: trans("aboutDotchat") as string,
-          }}
-        />
-        <p className="text-lg text-gray-500 mb-5">{trans("dotChatDesc")}</p>
-      </section>
-
-      <hr />
-
-      {/* Features Section */}
-      <section className="my-12">
-        <div
-          className="text-2xl my-5"
-          dangerouslySetInnerHTML={{
-            __html: trans("dotchatFeatuers") as string,
-          }}
-        />
-        <p className="text-lg text-gray-500 mb-5">
-          {trans("dotchatFeaturesList")}
-        </p>
-        <div>
-          {features.map(feature => (
-            <li key={feature.id} className="my-12  list-none">
-              <section
-                className={`flex flex-col md:flex-row items-center justify-around p-5  ${
-                  feature.id % 2 === 0 ? "" : "bg-white"
-                }`}>
-                <div
-                  className={`md:w-3/5 w-full sm:block flex ${feature.id % 2 === 0 ? "order-1 md:order-2" : ""}`}>
-                  <div className="flex items-center sm:justify-start sm:text-2xl text-xl mb-7  ">
-                    <span className="border rounded-2xl py-4 px-6  mr-4 ml-4">
-                      {feature.id}
-                    </span>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: trans(feature.title) as string,
-                      }}
-                    />
-                  </div>
-                  <div className="hidden md:block">
-                    <div
-                      className="text-gray-500 text-sm md:text-base mb-4"
-                      dangerouslySetInnerHTML={{
-                        __html: trans(feature.description) as string,
-                      }}
-                    />
-                    <img
-                      src={feature.imgDesktop}
-                      className="hidden md:block"
-                      alt={feature.title}
-                    />
-                  </div>
-                </div>
-
-                <div
-                  className={`md:ml-10 w-full md:w-auto ${feature.id % 2 === 0 ? "order-2 md:order-1" : ""}`}>
-                  <img
-                    src={feature.imgMobile}
-                    className="w-full h-auto max-w-xs mx-auto"
-                    alt={feature.title}
-                  />
-                </div>
-              </section>
-              <hr />
-            </li>
-          ))}
+          <div className="">
+            <img src={hands} alt="Hand holding phone" className="" />
+          </div>
         </div>
       </section>
-
-      {/* Download Section */}
-      <section className="my-12">
-        <div className="border rounded-xl py-6 md:w-11/12 w-2/3 m-auto flex md:flex-row flex-col items-center justify-center gap-5">
-          <div>
-            <img
-              src={qrCode}
-              className=" mb-3 sm:mb-0 md:w-2/3 m-auto w-full"
-              alt="QR Code"
-            />
-          </div>
-          <div className="">
-            <p className="md:mb-7 mb-4 md:text-2xl text-sm">
-              <strong>{trans("download")}</strong>
-              {trans("downloadFrom")}
+      <section className="py-12 w-11/12 m-auto ">
+        <h1 className="text-4xl font-bold leading-10 py-5">About Dotchat</h1>
+        <p className="text-gray-`600">
+          DotChat is an innovative eCommerce social media platform designed for
+          both merchants and clients. Here &apos;s what we offer:
+        </p>
+        <ul className="ml-10 py-4">
+          <li className="list-disc text-gray-600">
+            <strong>For Merchants:</strong> Full control over your business with
+            features to manage products, orders, and interactions with clients.
+          </li>
+          <li className="list-disc text-gray-600">
+            {" "}
+            <strong>Social Engagement:</strong> Post updates, share content, and
+            keep your customers informed with integrated social media tools.
+          </li>
+          <li className="list-disc text-gray-600">
+            <strong> Direct Communication:</strong> Built-in chat system to
+            connect with clients in real-time.
+          </li>
+          <li className="list-disc text-gray-600">
+            <strong> Client Experience:</strong> Customers can explore
+            businesses, follow merchants, and communicate easily through chat.
+          </li>
+          <li className="list-disc text-gray-600">
+            <strong>All-in-One Solution:</strong> A seamless blend of eCommerce
+            and social interaction to drive business growth Join us at DotChat,
+            where commerce meets community.
+          </li>
+        </ul>
+        <p className="text-gray-600 text-sm text-nowrap">
+          Join us at DotChat, where commerce meets community.
+        </p>
+      </section>
+      <section className="py-12 w-11/12 m-auto ">
+        <p className="text-center pb-10 text-3xl">
+          Dotchat In <strong>numbers</strong>
+        </p>
+        <div className="md:w-3/4 m-auto  grid grid-flow-row-dense lg:grid-cols-3 grid-rows-2 gap-3">
+          <div className=" rounded-lg border border-gray-200 p-7">
+            <TbDatabaseImport className="text-4xl text-blue-700" />
+            <p className="py-3">Earn 5.3% APY*</p>
+            <p className="text-xs text-gray-600 mb-10">
+              That &apos;s higher than most savings accounts. Stop getting
+              ripped off by banks
             </p>
-            <div className="flex justify-around w-1/2">
-              <img src={appStore} className="md:w-56 w-32" alt="App Store" />
-              <img src={playStore} className="md:w-56 w-32" alt="Play Store" />
-            </div>
+          </div>
+          <div className="bg-blue-200 row-span-2 bg-gradient-to-tr from-gray-300 to-slate-50  rounded-lg border border-gray-200 p-7">
+            2
+          </div>
+          <div className="rounded-lg border border-gray-200  p-4">
+            <FaLandmarkFlag className="text-4xl text-blue-700" />
+            <p className="py-3">
+              Backed by the full faith of the US Government
+            </p>
+            <p className="text-xs text-gray-600 mb-10">
+              Treasury Bills are one of the safest assets in the world
+            </p>
+          </div>
+          <div className="rounded-lg border border-gray-200  p-4">
+            <FaMoneyBills className="text-4xl text-blue-700" />
+            <p className="py-3">Locked-in rate</p>
+            <p className="text-xs text-gray-600 mb-10">
+              Your interest rate is locked in even if the Fed drops interest
+              rates
+            </p>
+          </div>
+          <div className="rounded-lg border border-gray-200  p-4">
+            <PiHandCoins className="text-4xl text-blue-700" />
+            <p className="py-3">Major Tax Benefits</p>
+            <p className="text-xs text-gray-600 mb-10">
+              You don &apos;t pay state and local taxes on interest earned,
+              unlike savings accounts
+            </p>
           </div>
         </div>
       </section>

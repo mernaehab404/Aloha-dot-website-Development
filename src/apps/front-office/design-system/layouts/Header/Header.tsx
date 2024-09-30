@@ -90,7 +90,7 @@ export default function Header() {
   applyFontStyles();
 
   return (
-    <div className="bg-gradient-to-br pt-5 from-[#deebfe] to-[#fff8d9]">
+    <div className=" pt-5 ">
       <Headroom>
         <header className="w-11/12 m-auto shadow-lg border border-gray-100 rounded-2xl  bg-white  z-50">
           <div className="mx-auto flex items-center justify-between h-16 px-4">
