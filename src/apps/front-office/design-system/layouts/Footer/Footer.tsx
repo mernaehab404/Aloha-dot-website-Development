@@ -28,7 +28,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div className="py-5  m-auto bg-customBlack  text-white">
+        <div className="py-5 w-11/12 rounded-lg my-5 m-auto bg-customBlack  text-white">
           <div className="flex flex-col md:flex-row py-6 w-11/12  m-auto">
             <div className="md:w-7/12 ">
               <Link to="/">

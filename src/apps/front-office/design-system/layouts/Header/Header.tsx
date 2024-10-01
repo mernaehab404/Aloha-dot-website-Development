@@ -92,15 +92,15 @@ export default function Header() {
   return (
     <div className=" pt-5 ">
       <Headroom>
-        <header className="w-11/12 m-auto shadow-lg border border-gray-100 rounded-2xl  bg-white  z-50">
-          <div className="mx-auto flex items-center justify-between h-16 px-4">
+        <header className="w-11/12 m-auto shadow-lg border border-gray-100 rounded-2xl bg-white z-50">
+          <div className="flex items-center justify-between h-16 px-2 ">
             <Link to="/">
               <div className="flex items-center">
                 <img src={logo} alt="Logo" className="my-1" />
               </div>
             </Link>
 
-            <nav className="hidden sm:flex space-x-4">
+            <nav className="hidden sm:flex  sm:space-x-0 md:space-x-4">
               <ul className="grid grid-cols-5 ">
                 {/* Home */}
                 <li className="py-2 text-xs lg:text-base font-medium">
@@ -235,7 +235,7 @@ export default function Header() {
                 </li>
 
                 {/* Language Switcher */}
-                <li className="py-2 text-xs lg:text-base font-medium">
+                <li className="py-1 text-xs lg:text-base font-medium">
                   <div>
                     <LanguageIcon className="mr-1 ml-1" />
                     <a
@@ -260,7 +260,7 @@ export default function Header() {
 
                 {/* Contact Us */}
                 <Link to="/contact-us">
-                  <button className="rounded-xl bg-blue-100 px-3 py-2 text-xs lg:text-base font-medium text-blue-600 hover:text-black hover:bg-transparent border hover:border-black">
+                  <button className="rounded-xl text-nowrap bg-blue-100 px-3 py-2 text-xs lg:text-base font-medium text-blue-600 hover:text-black hover:bg-transparent border hover:border-black">
                     {trans("contact")}
                   </button>
                 </Link>

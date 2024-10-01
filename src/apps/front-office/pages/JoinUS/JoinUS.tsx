@@ -30,7 +30,7 @@ export default function JoinUS() {
   });
 
   return (
-    <div className="w-11/12 sm:w-4/5 m-auto flex flex-col md:flex-row justify-center rounded-lg overflow-hidden">
+    <div className="w-11/12 mt-5 sm:w-4/5 m-auto flex flex-col md:flex-row justify-center rounded-lg overflow-hidden">
       {/* Left Side: Image and Text */}
       <div className="relative md:w-2/5 my-auto w-full mb-7">
         <img

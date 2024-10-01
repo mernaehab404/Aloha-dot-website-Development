@@ -1,18 +1,17 @@
-import { getCurrentLocaleCode } from "@mongez/localization";
 import appStoreWhite from "assets/images/appStoreWhite.svg";
 import googlePlay from "assets/images/googleplayWhite'.svg";
 import hands from "assets/images/Handsvg.svg";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { FaLandmarkFlag, FaMoneyBills } from "react-icons/fa6";
 import { PiHandCoins } from "react-icons/pi";
 import { TbDatabaseImport } from "react-icons/tb";
 export default function DotChatPage() {
-  const [isArabic, setisArabic] = useState(false);
-  useEffect(() => {
-    if (getCurrentLocaleCode() == "ar") {
-      setisArabic(true);
-    }
-  }, []);
+  // const [isArabic, setisArabic] = useState(false);
+  // useEffect(() => {
+  //   if (getCurrentLocaleCode() == "ar") {
+  //     setisArabic(true);
+  //   }
+  // }, []);
 
   return (
     <div className="">
